@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Camera : MonoBehaviour
 {
     public Transform target;
@@ -26,13 +26,13 @@ public class Camera : MonoBehaviour
     pivot.transform.position = target.transform.position;
     //pivot.transform.parent = target.transform;
     pivot.transform.parent = null;
-    Cursor.lockState = CursorLockMode.Locked;
+    
     }
 
     // LateUpdate is called once per frame 
     void LateUpdate()
     {
-
+     
         pivot.transform.position = target.transform.position;
 
         float horizontal = Input.GetAxis("Mouse X") * camspeed;
