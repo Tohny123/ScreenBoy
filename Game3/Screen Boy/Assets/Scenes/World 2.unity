@@ -1477,6 +1477,11 @@ PrefabInstance:
       propertyPath: CameraRef
       value: 
       objectReference: {fileID: 2066937632}
+    - target: {fileID: 6655016513072689330, guid: 8cd648376b0e3fc49825da5c1134f351,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8480042317585322631, guid: 8cd648376b0e3fc49825da5c1134f351,
         type: 3}
       propertyPath: m_Name
@@ -2387,6 +2392,11 @@ PrefabInstance:
       propertyPath: healthtext
       value: 
       objectReference: {fileID: 640858288}
+    - target: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6,
+        type: 3}
+      propertyPath: filename
+      value: Save.Sv
+      objectReference: {fileID: 0}
     - target: {fileID: 1606314640886676181, guid: 1af6db51e56e70f48837ab82fef59df6,
         type: 3}
       propertyPath: m_Name

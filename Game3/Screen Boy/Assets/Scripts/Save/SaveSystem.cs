@@ -1,0 +1,39 @@
+﻿using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
+public class SaveSystem
+{
+    public string filename;
+
+    public static void SaveCoin (GameManager gameman, string filename)
+    {
+        
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + filename;
+        FileStream stream = new FileStream(path, FileMode.Create);
+        PlayerData data = new PlayerData(gameman);
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
+public static PlayerData LoadCoin (string filename) 
+{
+    
+string path = Application.persistentDataPath + filename;
+if (File.Exists(path))
+{
+BinaryFormatter formatter = new BinaryFormatter();
+FileStream stream = new FileStream(path, FileMode.Open);
+PlayerData data = formatter.Deserialize(stream) as PlayerData;
+stream.Close();
+return data;
+}
+else
+{
+    return null;
+    Debug.Log ("Save Not Found");
+}
+}
+
+}
