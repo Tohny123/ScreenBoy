@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveSystem
 {
     public string filename;
-
+    
     public static void SaveCoin (GameManager gameman, string filename)
     {
         
@@ -17,7 +17,7 @@ public class SaveSystem
         stream.Close();
     }
 
-public static PlayerData LoadCoin (string filename) 
+public static PlayerData LoadCoin (GameManager gameman, string filename) 
 {
     
 string path = Application.persistentDataPath + filename;
@@ -31,7 +31,12 @@ return data;
 }
 else
 {
-    return null;
+    SaveCoin(gameman, filename);
+    BinaryFormatter formatter = new BinaryFormatter();
+    FileStream stream = new FileStream(path, FileMode.Open);
+    PlayerData data = formatter.Deserialize(stream) as PlayerData;
+    stream.Close();
+    return data;
     Debug.Log ("Save Not Found");
 }
 }

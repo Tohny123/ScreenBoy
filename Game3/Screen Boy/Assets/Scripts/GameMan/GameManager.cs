@@ -16,7 +16,14 @@ public class GameManager : MonoBehaviour
     { 
       
         load();
+        if (coinamount > 0)
+        {
         cointext.text = ("Coins: " + coinamount);
+        }
+        else
+        {
+        cointext.text = ("Coins: 0");
+        }
     }
 
   
@@ -40,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
     public void load ()
     {
-        PlayerData data = SaveSystem.LoadCoin(filename);
+        PlayerData data = SaveSystem.LoadCoin(this,filename);
         coinamount = data.coinamount;
         Debug.Log("Loading");
     }

@@ -3,37 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-
 public LayerMask floor;
-
 public float speed;
-
 public float jumpheight;
-
 public float gravityspeed;
-
 public Animator anim;
-
 public float rotspeed;
-
 public Transform pivot;
-
 public CharacterController contrl;
-
 public float kb;
-
 public float kbtime;
-
 private float kbcount;
-
 public GameObject model;
-
 public AudioSource audio;
-
 public AudioClip jumpsound;
-
 public float jumpvolume;
-
 private Vector3 V3;
 void Start()
     {
