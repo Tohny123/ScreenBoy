@@ -18,6 +18,7 @@ void Start ()
         levelButtons[i].interactable = false;
         }
     }
+    Cursor.lockState = CursorLockMode.None;
 }
 public void gamestart(string LevelName)
 {

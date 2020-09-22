@@ -13,10 +13,11 @@ public class LevelWin : MonoBehaviour
        
         if(other.gameObject.tag == "Player")
         {
+            SceneManager.LoadScene("Level Select");
             if (PlayerPrefs.GetInt("levelReached") < unlockedlevel)
             {
                 PlayerPrefs.SetInt("levelReached", unlockedlevel);   
-                SceneManager.LoadScene("Level Select");
+                
             }
         }
         
