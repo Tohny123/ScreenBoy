@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextlevel: 
   unlockedlevel: 0
+  gameman: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6, type: 3}
 --- !u!65 &1226802420420366431
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class SelectLevel : MonoBehaviour
 {
-    
+    public int? levelReached;
+    public PlayerData plrdata;
 public Button[] levelButtons;
 void Start ()
 {
-    int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+   levelReached = plrdata.levelamount;
     for (int i = 0; i < levelButtons.Length; i++)
     {
         if (i + 1 > levelReached) 
@@ -20,9 +21,10 @@ void Start ()
     }
     Cursor.lockState = CursorLockMode.None;
 }
-public void gamestart(string LevelName)
+void Update()
 {
-SceneManager.LoadScene(LevelName);
+    levelReached = plrdata.levelamount;
 }
+
 
 }

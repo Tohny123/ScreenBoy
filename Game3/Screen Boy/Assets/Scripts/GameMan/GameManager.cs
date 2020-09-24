@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
     public Text healthtext;
     public static SaveSystem savesystem = new SaveSystem();
     public string filename = savesystem.filename;
-    
+    public int? levelamount;
+    public LevelWin levlwin;
     void Start()
     { 
       
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
   
     void Update()
     {
+        
         healthdisplay = Health.currenthealth;
         healthtext.text = ("Health: " + healthdisplay);
         if (coinamount == null)
@@ -42,12 +44,12 @@ public class GameManager : MonoBehaviour
     }
     public void save ()
     {
-        SaveSystem.SaveCoin(this, filename);
+        SaveSystem.Save(this, filename);
         Debug.Log("Saved");
     }
     public void load ()
     {
-        PlayerData data = SaveSystem.LoadCoin(this,filename);
+        PlayerData data = SaveSystem.Load(this,filename);
         coinamount = data.coinamount;
         Debug.Log("Loading");
     }

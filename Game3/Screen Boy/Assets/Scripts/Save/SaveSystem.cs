@@ -6,7 +6,7 @@ public class SaveSystem
 {
     public string filename;
     
-    public static void SaveCoin (GameManager gameman, string filename)
+    public static void Save (GameManager gameman, string filename)
     {
         
         BinaryFormatter formatter = new BinaryFormatter();
@@ -17,7 +17,7 @@ public class SaveSystem
         stream.Close();
     }
 
-public static PlayerData LoadCoin (GameManager gameman, string filename) 
+public static PlayerData Load (GameManager gameman, string filename) 
 {
     
 string path = Application.persistentDataPath + filename;
@@ -31,7 +31,7 @@ return data;
 }
 else
 {
-    SaveCoin(gameman, filename);
+    Save(gameman, filename);
     BinaryFormatter formatter = new BinaryFormatter();
     FileStream stream = new FileStream(path, FileMode.Open);
     PlayerData data = formatter.Deserialize(stream) as PlayerData;
