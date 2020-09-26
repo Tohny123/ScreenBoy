@@ -50,6 +50,9 @@ MonoBehaviour:
     type: 3}
   inv: 0
   enemydeath: {fileID: 8300000, guid: 0c6b8bf6201cd4742b4ecfafde66450b, type: 3}
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  vol: 0
+  tempvol: 0
 --- !u!1 &4341496129417097988
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +165,9 @@ MonoBehaviour:
     type: 3}
   inv: 0
   enemydeath: {fileID: 8300000, guid: 0c6b8bf6201cd4742b4ecfafde66450b, type: 3}
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  vol: 0
+  tempvol: 0
 --- !u!1 &6963514834726556739
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +280,9 @@ MonoBehaviour:
     type: 3}
   inv: 0
   enemydeath: {fileID: 8300000, guid: 0c6b8bf6201cd4742b4ecfafde66450b, type: 3}
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  vol: 0
+  tempvol: 0
 --- !u!1 &6963514834988218232
 GameObject:
   m_ObjectHideFlags: 0
