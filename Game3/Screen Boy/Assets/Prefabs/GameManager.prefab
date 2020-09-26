@@ -44,10 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e758c1f5d780d47ba12416a366462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinamount: 0
   cointext: {fileID: 0}
   healthdisplay: 0
   healthtext: {fileID: 0}
+  filename: /Save.Sv
+  levelamount: 0
+  levlwin: {fileID: 7940368954275241771, guid: 7b17652227bb8144cabf8bd92694cf91, type: 3}
+  test: 0
+  plrdata:
+    levelamount: 0
 --- !u!114 &1606314640886676182
 MonoBehaviour:
   m_ObjectHideFlags: 0

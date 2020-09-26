@@ -2504,7 +2504,7 @@ PrefabInstance:
     - target: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6,
         type: 3}
       propertyPath: filename
-      value: Save.Sv
+      value: /Save.Sv
       objectReference: {fileID: 0}
     - target: {fileID: 1606314640886676181, guid: 1af6db51e56e70f48837ab82fef59df6,
         type: 3}

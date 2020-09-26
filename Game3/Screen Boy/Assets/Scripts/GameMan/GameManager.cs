@@ -3,20 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 public class GameManager : MonoBehaviour
 {
-    public int? coinamount;
+    public int coinamount;
     public Text cointext;
     public int healthdisplay;
     public Text healthtext;
     public static SaveSystem savesystem = new SaveSystem();
-    public string filename = savesystem.filename;
-    public int? levelamount;
+    public string filename;
+    public int levelamount;
     public LevelWin levlwin;
+   
+    public int test;
+    public PlayerData plrdata;
+
     void Start()
     { 
-      
-        load();
+      load();
+        
+       
         if (coinamount > 0)
         {
         cointext.text = ("Coins: " + coinamount);
@@ -30,6 +37,9 @@ public class GameManager : MonoBehaviour
   
     void Update()
     {
+        
+       test = plrdata.coinamount;
+
         
         healthdisplay = Health.currenthealth;
         healthtext.text = ("Health: " + healthdisplay);
@@ -49,8 +59,9 @@ public class GameManager : MonoBehaviour
     }
     public void load ()
     {
-        PlayerData data = SaveSystem.Load(this,filename);
+        PlayerData data = SaveSystem.Load(this, filename);
         coinamount = data.coinamount;
+        levelamount = data.levelamount;
         Debug.Log("Loading");
     }
 

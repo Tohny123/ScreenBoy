@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveSystem
 {
-    public string filename;
+
     
     public static void Save (GameManager gameman, string filename)
     {

@@ -2241,8 +2241,13 @@ PrefabInstance:
     - target: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6,
         type: 3}
       propertyPath: filename
-      value: Save.Sv
+      value: /Save.Sv
       objectReference: {fileID: 0}
+    - target: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6,
+        type: 3}
+      propertyPath: levlwin
+      value: 
+      objectReference: {fileID: 1330063374}
     - target: {fileID: 1606314640886676181, guid: 1af6db51e56e70f48837ab82fef59df6,
         type: 3}
       propertyPath: m_Name
@@ -4735,6 +4740,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 17620902}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1330063374 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7940368954275241771, guid: 7b17652227bb8144cabf8bd92694cf91,
+    type: 3}
+  m_PrefabInstance: {fileID: 7940368953090681265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 794e7a7204687944a802b9536db4b0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1334660675 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4587756872110948180, guid: 94401baa3d7b4f940938449f341cc501,
@@ -7251,6 +7268,11 @@ PrefabInstance:
       propertyPath: unlockedlevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7940368954275241771, guid: 7b17652227bb8144cabf8bd92694cf91,
+        type: 3}
+      propertyPath: gameman
+      value: 
+      objectReference: {fileID: 765050907}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b17652227bb8144cabf8bd92694cf91, type: 3}
 --- !u!1001 &8480042318662874561

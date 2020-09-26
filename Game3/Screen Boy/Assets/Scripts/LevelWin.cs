@@ -8,17 +8,24 @@ public class LevelWin : MonoBehaviour
     public string nextlevel;
     public int unlockedlevel;
     public GameManager gameman;
+    public PlayerData plrdata;
+    
+    
     private void OnTriggerEnter(Collider other)
     {
-       
+     
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Level Select");
-            if (gameman.levelamount < unlockedlevel)
+            int levl = unlockedlevel - 1;
+            if (gameman.levelamount < levl)
             {
-                gameman.levelamount = unlockedlevel;  
+                gameman.levelamount = levl;
+                plrdata.levelamount = levl;  
                 
             }
+            gameman.save();
+          
+            SceneManager.LoadScene("Level Select");
         }
         
 
