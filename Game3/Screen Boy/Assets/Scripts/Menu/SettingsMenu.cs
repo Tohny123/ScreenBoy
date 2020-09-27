@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audmix;
     Resolution[] resolutions;
     public Dropdown resdropdown;
     public Slider volslider;
+    public GameObject areyousure;
+    public GameManager gameman;
+    public static SaveSystem savesys = new SaveSystem();
+    public string filename;
     void Start()
     {
         float tempvol;
@@ -34,6 +38,27 @@ public class SettingsMenu : MonoBehaviour
         resdropdown.AddOptions(resoptions);
         resdropdown.value = curresindex;
         resdropdown.RefreshShownValue();
+
+        areyousure.SetActive(false);
+
+    }
+
+    public void activateareyousure ()
+    {
+        areyousure.SetActive(true);
+    }
+
+    public void savedelyes()
+    {
+        gameman.coinamount = 0;
+        gameman.levelamount = 0;
+        SaveSystem.Save(gameman, filename);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void savedelno()
+    {
+        areyousure.SetActive(false);
     }
 
     public void VolSet (float vol)

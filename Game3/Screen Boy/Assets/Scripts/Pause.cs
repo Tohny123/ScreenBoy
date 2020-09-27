@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
     public GameObject pauseui;
     public GameObject CameraRef;
     public string MenuString;
+
     void Start()
     {
         Time.timeScale = 1f;
