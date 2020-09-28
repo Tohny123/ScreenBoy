@@ -2278,6 +2278,12 @@ PrefabInstance:
       propertyPath: Healthtext
       value: 
       objectReference: {fileID: 330013397}
+    - target: {fileID: 1606314640886676182, guid: 1af6db51e56e70f48837ab82fef59df6,
+        type: 3}
+      propertyPath: audmixer
+      value: 
+      objectReference: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e,
+        type: 2}
     - target: {fileID: 1606314640886676183, guid: 1af6db51e56e70f48837ab82fef59df6,
         type: 3}
       propertyPath: m_LocalPosition.x

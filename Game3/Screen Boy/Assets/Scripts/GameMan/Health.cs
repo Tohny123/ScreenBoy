@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Audio;
 public class Health : MonoBehaviour
 {
     public int maxhealth;
@@ -29,12 +29,18 @@ public class Health : MonoBehaviour
     public Text Healthtext;
     public Color HealthColor;
     public AudioClip alert;
+    public AudioMixer audmixer;
+    public float tempvol;
+    public float finalvol;
     // Start is called before the first frame update
     void Start()
     {
         currenthealth = maxhealth;
         //plr = FindObjectOfType<Player>();
         spawnpoint = plr.transform.position;
+
+        audmixer.GetFloat("Volume", out tempvol);
+        finalvol = 1/Mathf.Abs(tempvol);
     }
 
     // Update is called once per frame
@@ -114,7 +120,7 @@ public class Health : MonoBehaviour
     {
         
         isrespawn = true;
-        hurtsoundsource.PlayOneShot(gameoversound, hurtvolume);
+        AudioSource.PlayClipAtPoint(gameoversound, plr.transform.position, finalvol);
         Instantiate(deathparticle, plr.transform.position, plr.transform.rotation);
         plr.gameObject.SetActive(false);
 
