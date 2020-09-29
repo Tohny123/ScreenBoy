@@ -477,7 +477,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back
+  m_Text: Menu
 --- !u!222 &149034839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1160,7 +1160,7 @@ GameObject:
   - component: {fileID: 581227512}
   - component: {fileID: 581227511}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1830,7 +1830,6 @@ MonoBehaviour:
     levelamount: 0
   gameman: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6, type: 3}
   levelButtons:
-  - {fileID: 1009203417}
   - {fileID: 1009203417}
   - {fileID: 1009203417}
   - {fileID: 1009203417}
