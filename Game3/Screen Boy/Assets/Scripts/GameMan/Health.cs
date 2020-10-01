@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     public static Vector3 spawnpoint;
     public float spawndelay;
     public GameObject deathparticle;
-    public Image blackscreen;
+    //public Image blackscreen;
     private bool fadeblack;
     private bool fadeback;
     public float fadespeed;
@@ -32,9 +32,16 @@ public class Health : MonoBehaviour
     public AudioMixer audmixer;
     public float tempvol;
     public float finalvol;
+    public GameObject fader;
+    public Fade fade;
+    public Color fadecolor;
+    public Image fadeimage;
     // Start is called before the first frame update
     void Start()
     {
+    fader = GameObject.Find("Fade");
+    fade = fader.GetComponent<Fade>();
+
         currenthealth = maxhealth;
         //plr = FindObjectOfType<Player>();
         spawnpoint = plr.transform.position;
@@ -46,6 +53,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fadecolor = fadeimage.color;
        if(currenthealth < 6)
        {
            
@@ -74,16 +82,18 @@ public class Health : MonoBehaviour
         }
         if(fadeblack)
         {
-            blackscreen.color = new Color(blackscreen.color.r, blackscreen.color.g, blackscreen.color.b, Mathf.MoveTowards(blackscreen.color.a, 1f, fadespeed * Time.deltaTime));
-            if(blackscreen.color.a == 1f )
+            //blackscreen.color = new Color(blackscreen.color.r, blackscreen.color.g, blackscreen.color.b, Mathf.MoveTowards(blackscreen.color.a, 1f, fadespeed * Time.deltaTime));
+            StartCoroutine(fade.DeathFade());
+            if(fadecolor.a == 1f)
             {
                 fadeblack = false;
             }
         }
         if(fadeback)
         {
-            blackscreen.color = new Color(blackscreen.color.r, blackscreen.color.g, blackscreen.color.b, Mathf.MoveTowards(blackscreen.color.a, 0f, fadespeed * Time.deltaTime));
-            if(blackscreen.color.a == 0f)
+            //blackscreen.color = new Color(blackscreen.color.r, blackscreen.color.g, blackscreen.color.b, Mathf.MoveTowards(blackscreen.color.a, 0f, fadespeed * Time.deltaTime));
+        StartCoroutine(fade.FadeBack());
+            if(fadecolor.a == 0f)
             {
                 fadeback = false;
             }

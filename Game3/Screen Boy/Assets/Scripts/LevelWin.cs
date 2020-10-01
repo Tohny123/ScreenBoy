@@ -9,6 +9,17 @@ public class LevelWin : MonoBehaviour
     public int unlockedlevel;
     public GameManager gameman;
     public PlayerData plrdata;
+    public string LevlNam;
+    public GameObject fader;
+    public Fade fade;
+
+    void Start()
+    {
+    fader = GameObject.Find("Fade");
+    fade = fader.GetComponent<Fade>();
+    }
+ 
+
     
     
     private void OnTriggerEnter(Collider other)
@@ -25,7 +36,7 @@ public class LevelWin : MonoBehaviour
             }
             gameman.save();
           
-            SceneManager.LoadScene("Level Select");
+           StartCoroutine(fade.LevelFade(LevlNam));
         }
         
 

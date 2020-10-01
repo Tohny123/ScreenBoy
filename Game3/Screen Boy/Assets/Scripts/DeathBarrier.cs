@@ -5,11 +5,12 @@ using UnityEngine;
 public class DeathBarrier : MonoBehaviour
 {
     public int death;
+    public GameManager gameman;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame

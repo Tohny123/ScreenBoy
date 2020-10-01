@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1606314640886676183}
   - component: {fileID: 1606314640886676180}
   - component: {fileID: 1606314640886676182}
+  - component: {fileID: 8371043205715261379}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e758c1f5d780d47ba12416a366462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinamount: 0
   cointext: {fileID: 0}
   healthdisplay: 0
   healthtext: {fileID: 0}
@@ -52,6 +54,7 @@ MonoBehaviour:
   levlwin: {fileID: 7940368954275241771, guid: 7b17652227bb8144cabf8bd92694cf91, type: 3}
   test: 0
   plrdata:
+    coinamount: 0
     levelamount: 0
 --- !u!114 &1606314640886676182
 MonoBehaviour:
@@ -74,7 +77,6 @@ MonoBehaviour:
   spawndelay: 1
   deathparticle: {fileID: 104934251662942088, guid: 37b5897ad133efb45a0c6935697965d8,
     type: 3}
-  blackscreen: {fileID: 0}
   fadespeed: 1
   fadedelay: 1
   hurtsoundsource: {fileID: 0}
@@ -84,3 +86,25 @@ MonoBehaviour:
   Healthtext: {fileID: 0}
   HealthColor: {r: 1, g: 0, b: 0, a: 0}
   alert: {fileID: 8300000, guid: c1aaabad273f0f44484c6936d7a3269d, type: 3}
+  audmixer: {fileID: 0}
+  tempvol: 0
+  finalvol: 0
+  fader: {fileID: 0}
+  fade: {fileID: 0}
+  fadecolor: {r: 0, g: 0, b: 0, a: 0}
+  fadeimage: {fileID: 8410612137342749146, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2,
+    type: 3}
+--- !u!114 &8371043205715261379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606314640886676181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a86dab77eed20b4aae9b961d6bea530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fader: {fileID: 8410612137342749150, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2, type: 3}
+  fade: {fileID: 0}

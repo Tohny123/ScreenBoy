@@ -6,10 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    
+
+public GameObject fader;
+public Fade fade;
+
+void Start()
+{
+    fader = GameObject.Find("Fade");
+    fade = fader.GetComponent<Fade>();
+}
 public void gamestart(string LevelName)
 {
-SceneManager.LoadScene(LevelName);
+StartCoroutine(fade.LevelFade(LevelName));
 }
+
 
 }

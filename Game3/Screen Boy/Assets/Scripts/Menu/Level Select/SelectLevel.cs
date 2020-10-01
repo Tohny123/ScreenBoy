@@ -14,24 +14,17 @@ public class SelectLevel : MonoBehaviour
     public Button[] levelButtons;
     public string filename;
     public static SaveSystem savesys = new SaveSystem();
+    public GameObject fader;
+    public Fade fade;
    // public int test;
 
 void Start ()
 {
+
+    fader = GameObject.Find("Fade");
+    fade = fader.GetComponent<Fade>();
+
     load();
-    
-    
-     //string path = Application.persistentDataPath + filename;
-       // if(File.Exists(path))
-       // {
-       //     load();
-      //  }
-     //   else
-     //   {
-      //     plrdata.levelamount = 0;
-     //   }
-  
-    
 
     for (int i = 0; i < levelButtons.Length; i++)
     {
@@ -57,7 +50,7 @@ levelReached = data.levelamount;
 public void LoadLevel(string loadedlevel)
 {
 
-SceneManager.LoadScene(loadedlevel);
+StartCoroutine(fade.LevelFade(loadedlevel));
 }
 void Update()
 {

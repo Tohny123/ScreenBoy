@@ -4,13 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
-   public static bool gamepause;
+    public static bool gamepause;
     public GameObject pauseui;
     public GameObject CameraRef;
     public string MenuString;
+    public GameObject fader;
+    public Fade fade;
 
     void Start()
     {
+        fader = GameObject.Find("Fade");
+        fade = fader.GetComponent<Fade>();
         Time.timeScale = 1f;
         gamepause = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -50,7 +54,9 @@ gamepause = true;
 }
 public void MenuLoad()
 {
-    SceneManager.LoadScene(MenuString);
+    ResumeGame();
+   StartCoroutine(fade.LevelFade(MenuString));
+   Cursor.lockState = CursorLockMode.None;
 }
 
 public void QuitGame()
