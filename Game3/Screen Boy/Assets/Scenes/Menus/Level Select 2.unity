@@ -659,7 +659,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b579f3b4c8dbf93499a1eda97da3101e,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4f3897b02ac85214b9f226a49a92e17a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0ad0dd4d57e09b2428fc0397b4ef86eb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -860,7 +860,7 @@ PrefabInstance:
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_Text
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -910,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: World 3
+      value: World 8
       objectReference: {fileID: 0}
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -1392,7 +1392,7 @@ PrefabInstance:
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_Text
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -1442,7 +1442,7 @@ PrefabInstance:
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: World 3
+      value: World 9
       objectReference: {fileID: 0}
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -1690,6 +1690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 8410612137342749150, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8410612137342749151, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2,
         type: 3}
@@ -1967,6 +1972,8 @@ MonoBehaviour:
   - {fileID: 1426224143}
   - {fileID: 1922085365}
   filename: /Save.Sv
+  fader: {fileID: 0}
+  fade: {fileID: 0}
 --- !u!4 &1008317237
 Transform:
   m_ObjectHideFlags: 0
@@ -2346,7 +2353,7 @@ PrefabInstance:
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_Text
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -2396,7 +2403,7 @@ PrefabInstance:
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: World 3
+      value: World 10
       objectReference: {fileID: 0}
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -2810,7 +2817,7 @@ PrefabInstance:
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_Text
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -2860,7 +2867,7 @@ PrefabInstance:
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: World 2
+      value: World 7
       objectReference: {fileID: 0}
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
@@ -3138,6 +3145,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6301623184062413384, guid: 8e341de5bd6403545aa0e733495b6fd8,
+        type: 3}
+      propertyPath: m_Text
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3171,7 +3183,7 @@ PrefabInstance:
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: World
+      value: World 6
       objectReference: {fileID: 0}
     - target: {fileID: 6646866133132826881, guid: 8e341de5bd6403545aa0e733495b6fd8,
         type: 3}
