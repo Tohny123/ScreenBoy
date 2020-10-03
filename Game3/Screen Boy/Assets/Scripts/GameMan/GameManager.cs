@@ -15,14 +15,18 @@ public class GameManager : MonoBehaviour
     public string filename;
     public int levelamount;
     public LevelWin levlwin;
-   
+    public float rotspd;
     public int test;
     public PlayerData plrdata;
 
     void Start()
     { 
-      load();
         
+      load();
+        if(rotspd <= 0)
+        {
+            rotspd = 25;
+        }
        
         if (coinamount > 0)
         {
@@ -62,6 +66,7 @@ public class GameManager : MonoBehaviour
         PlayerData data = SaveSystem.Load(this, filename);
         coinamount = data.coinamount;
         levelamount = data.levelamount;
+        rotspd = data.rotationspeed;
         Debug.Log("Loading");
     }
 

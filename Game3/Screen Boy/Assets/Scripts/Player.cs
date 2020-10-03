@@ -19,10 +19,14 @@ public AudioSource audio;
 public AudioClip jumpsound;
 public float jumpvolume;
 private Vector3 V3;
+public GameObject gamemanager;
+public GameManager gameman;
 void Start()
     {
+        gamemanager = GameObject.Find("GameManager");
+        gameman = gamemanager.GetComponent<GameManager>();
         contrl = GetComponent<CharacterController>();
-       
+        rotspeed = gameman.rotspd;
     }
 
 void Update()

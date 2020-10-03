@@ -10,16 +10,28 @@ public class SettingsMenu : MonoBehaviour
     Resolution[] resolutions;
     public Dropdown resdropdown;
     public Slider volslider;
+    public Slider sensitivityslider;
     public GameObject areyousure;
     public GameManager gameman;
     public static SaveSystem savesys = new SaveSystem();
     public string filename;
+    public float rotspeed;
+    
     void Start()
     {
+        rotspeed = gameman.rotspd;
         float tempvol;
         audmix.GetFloat("Volume",out tempvol);
         volslider.value = tempvol;
-
+        if (rotspeed <= 0)
+        {
+            sensitivityslider.value = 25;
+        }
+        else
+        {
+            sensitivityslider.value = rotspeed;
+        }
+        
         resolutions = Screen.resolutions;
         resdropdown.ClearOptions();
         List<string> resoptions = new List<string>();
@@ -65,6 +77,16 @@ public class SettingsMenu : MonoBehaviour
     {
         
         audmix.SetFloat("Volume", vol);
+    }
+    
+    public void CamSpeed(float rotatespeed)
+    {
+   
+    PlayerData plrdata = SaveSystem.Load(gameman, filename);
+    gameman.rotspd = rotatespeed;
+    gameman.coinamount = plrdata.coinamount;
+    gameman.levelamount = plrdata.levelamount;
+    SaveSystem.Save(gameman, filename);
     }
 
     public void QualSet(int qualindex)
