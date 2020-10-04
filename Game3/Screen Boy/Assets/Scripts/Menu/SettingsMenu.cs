@@ -19,13 +19,15 @@ public class SettingsMenu : MonoBehaviour
     
     void Start()
     {
+        load();
         rotspeed = gameman.rotspd;
+    
         float tempvol;
         audmix.GetFloat("Volume",out tempvol);
         volslider.value = tempvol;
-        if (rotspeed <= 0)
+        if (rotspeed <= -1)
         {
-            sensitivityslider.value = 25;
+            sensitivityslider.value = 0;
         }
         else
         {
@@ -75,17 +77,17 @@ public class SettingsMenu : MonoBehaviour
 
     public void VolSet (float vol)
     {
-        
+        load();
+        gameman.volume = vol;
         audmix.SetFloat("Volume", vol);
+        SaveSystem.Save(gameman, filename);
     }
     
     public void CamSpeed(float rotatespeed)
     {
    
-    PlayerData plrdata = SaveSystem.Load(gameman, filename);
+    load();
     gameman.rotspd = rotatespeed;
-    gameman.coinamount = plrdata.coinamount;
-    gameman.levelamount = plrdata.levelamount;
     SaveSystem.Save(gameman, filename);
     }
 
@@ -97,11 +99,22 @@ public class SettingsMenu : MonoBehaviour
     public void Fullscreenset(bool isfullscrn)
     {
         Screen.fullScreen = isfullscrn;
+        gameman.fullscreen = isfullscrn;
+        SaveSystem.Save(gameman, filename);
     }
 
     public void ResSet(int resindex)
     {
         Resolution res = resolutions[resindex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+    }
+    public void load()
+    {
+    PlayerData plrdata = SaveSystem.Load(gameman, filename);
+    gameman.rotspd = plrdata.rotationspeed;
+    gameman.coinamount = plrdata.coinamount;
+    gameman.levelamount = plrdata.levelamount;
+    gameman.fullscreen = plrdata.fullscreen;
+    gameman.volume = plrdata.volume;
     }
 }

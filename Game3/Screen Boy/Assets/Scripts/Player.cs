@@ -26,7 +26,7 @@ void Start()
         gamemanager = GameObject.Find("GameManager");
         gameman = gamemanager.GetComponent<GameManager>();
         contrl = GetComponent<CharacterController>();
-        rotspeed = gameman.rotspd;
+      
     }
 
 void Update()
@@ -59,7 +59,7 @@ void Update()
 
         transform.rotation = Quaternion.Euler(0f, pivot.rotation.eulerAngles.y, 0f);
         Quaternion newrot = Quaternion.LookRotation(new Vector3 (V3.x, 0f ,V3.z));
-        model.transform.rotation = Quaternion.Slerp(model.transform.rotation, newrot, rotspeed * Time.deltaTime);
+        model.transform.rotation = Quaternion.Slerp(model.transform.rotation, newrot, rotspeed + Time.deltaTime);
     }   
 
     anim.SetBool("Grounded", contrl.isGrounded);

@@ -5,21 +5,21 @@ using UnityEngine.SceneManagement;
 public class Camera : MonoBehaviour
 {
     public Transform target;
-
     public Vector3 offset; 
-
     public float maxangle;
     public float minangle;
-
     public bool useoffset;
-
     public float camspeed;
-
     public Transform pivot;
+    public GameObject gamemanager;
+    public GameManager gameman;
 
     // Start is called before the first frame update
     void Start()
     {
+        gamemanager = GameObject.Find("GameManager");
+        gameman = gamemanager.GetComponent<GameManager>();
+        camspeed = gameman.rotspd;
        if (!useoffset){
         offset = target.position - transform.position;
         }

@@ -18,15 +18,13 @@ public class GameManager : MonoBehaviour
     public float rotspd;
     public int test;
     public PlayerData plrdata;
-
+    public float volume;
+    public bool fullscreen;
     void Start()
     { 
         
       load();
-        if(rotspd <= 0)
-        {
-            rotspd = 25;
-        }
+       
        
         if (coinamount > 0)
         {
@@ -67,6 +65,8 @@ public class GameManager : MonoBehaviour
         coinamount = data.coinamount;
         levelamount = data.levelamount;
         rotspd = data.rotationspeed;
+        volume = data.volume;
+        fullscreen = data.fullscreen;
         Debug.Log("Loading");
     }
 
