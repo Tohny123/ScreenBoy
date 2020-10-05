@@ -19,7 +19,7 @@ public class Camera : MonoBehaviour
     {
         gamemanager = GameObject.Find("GameManager");
         gameman = gamemanager.GetComponent<GameManager>();
-        camspeed = gameman.rotspd;
+    
        if (!useoffset){
         offset = target.position - transform.position;
         }
@@ -32,7 +32,7 @@ public class Camera : MonoBehaviour
     // LateUpdate is called once per frame 
     void LateUpdate()
     {
-     
+        camspeed = gameman.rotspd;
         pivot.transform.position = target.transform.position;
 
         float horizontal = Input.GetAxis("Mouse X") * camspeed;

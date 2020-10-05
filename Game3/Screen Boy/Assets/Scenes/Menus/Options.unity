@@ -2502,10 +2502,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 107767447}
   m_HandleRect: {fileID: 2058006896}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2721,6 +2721,7 @@ MonoBehaviour:
   gameman: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6, type: 3}
   filename: /Save.Sv
   rotspeed: 0
+  graphicsdropdown: {fileID: 687561051}
 --- !u!114 &1015953553
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class SettingsMenu : MonoBehaviour
     public static SaveSystem savesys = new SaveSystem();
     public string filename;
     public float rotspeed;
+    public Dropdown graphicsdropdown;
     
     void Start()
     {
@@ -52,6 +53,8 @@ public class SettingsMenu : MonoBehaviour
         resdropdown.AddOptions(resoptions);
         resdropdown.value = curresindex;
         resdropdown.RefreshShownValue();
+
+        graphicsdropdown.value = QualitySettings.GetQualityLevel();
 
         areyousure.SetActive(false);
 
