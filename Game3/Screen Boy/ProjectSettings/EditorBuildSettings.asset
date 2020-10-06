@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Level Select 2.unity
     guid: 294e24681fd2f614ab1babcbc29c4754
   - enabled: 1
+    path: Assets/Scenes/Menus/Level Select 3.unity
+    guid: c26e07bd952ab424e903c3e5eaba3a0c
+  - enabled: 1
     path: Assets/Scenes/Main World 1/World.unity
     guid: 7ecd961b8ba65b449b9c014436f85c89
   - enabled: 1
@@ -47,4 +50,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main World 2/World 10.unity
     guid: ee59ec28dc14cea4b822dff3557bff07
+  - enabled: 1
+    path: Assets/Scenes/Main World 3/World 11.unity
+    guid: 37e3faa53bf9c80478a9d3ee880017b9
+  - enabled: 1
+    path: Assets/Scenes/Main World 3/World 12.unity
+    guid: 54f5a5a894a01d343b5cd81684b35b06
+  - enabled: 1
+    path: Assets/Scenes/Main World 3/World 13.unity
+    guid: 0f935e5087528944288083d7f6bc44d9
+  - enabled: 1
+    path: Assets/Scenes/Main World 3/World 14.unity
+    guid: 9f11b6cc1493b4a41974b9189abbaa7a
+  - enabled: 1
+    path: Assets/Scenes/Main World 3/World 15.unity
+    guid: 834256e5d86eea84d9a11aad219c555d
   m_configObjects: {}
