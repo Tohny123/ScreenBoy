@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         
       load();
        
-       
+       Cursor.lockState = CursorLockMode.Locked;
         if (coinamount > 0)
         {
         cointext.text = ("Coins: " + coinamount);
