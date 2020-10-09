@@ -503,6 +503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plr: {fileID: 0}
   agent: {fileID: 6963514835698966192}
+  radius: 20
+  anim: {fileID: 6963514836088886117}
 --- !u!195 &6963514835698966192
 NavMeshAgent:
   m_ObjectHideFlags: 0
