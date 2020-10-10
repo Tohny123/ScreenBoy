@@ -5,18 +5,20 @@ using UnityEngine;
 public class DeathBarrier : MonoBehaviour
 {
     public int death;
-    public GameManager gameman;
+    public GameObject gameman;
+    public Health heal;
     
     // Start is called before the first frame update
     void Start()
     {
-    
+    gameman = GameObject.Find("GameManager");
+    heal = gameman.GetComponent<Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+       death = heal.deathbarrierhealth;
     }
     private void OnTriggerEnter(Collider other)
     {

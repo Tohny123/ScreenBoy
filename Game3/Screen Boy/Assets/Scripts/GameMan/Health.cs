@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public int maxhealth;
     public static int currenthealth;
+    public int deathbarrierhealth;
     public float invlength;
     public float invcount;
     public Player plr;
@@ -36,6 +37,7 @@ public class Health : MonoBehaviour
     public Fade fade;
     public Color fadecolor;
     public Image fadeimage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        deathbarrierhealth = currenthealth;
         fadecolor = fadeimage.color;
        if(currenthealth < 6)
        {
