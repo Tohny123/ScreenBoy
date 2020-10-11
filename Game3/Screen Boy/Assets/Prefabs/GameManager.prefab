@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1606314640886676180}
   - component: {fileID: 1606314640886676182}
   - component: {fileID: 8371043205715261379}
+  - component: {fileID: 7216937896343073513}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52,10 +53,16 @@ MonoBehaviour:
   filename: /Save.Sv
   levelamount: 0
   levlwin: {fileID: 7940368954275241771, guid: 7b17652227bb8144cabf8bd92694cf91, type: 3}
+  rotspd: 0
   test: 0
   plrdata:
     coinamount: 0
     levelamount: 0
+    rotationspeed: 0
+    volume: 0
+    fullscreen: 0
+  volume: 0
+  fullscreen: 0
 --- !u!114 &1606314640886676182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxhealth: 20
+  deathbarrierhealth: 0
   invlength: 1
   invcount: 0
   plr: {fileID: 0}
@@ -108,3 +116,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 8410612137342749150, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2, type: 3}
   fade: {fileID: 0}
+--- !u!114 &7216937896343073513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606314640886676181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca46d5560dacd444bf42b8bcd59278c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
