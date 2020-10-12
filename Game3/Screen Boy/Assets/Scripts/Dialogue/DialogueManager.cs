@@ -1,42 +1,63 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
 
     public Queue<string> sentences;
-
-    // Start is called before the first frame update
+    public GameObject ui;
+    public GameObject dialogueui;
+    public Animator dialogueanim;
+    public GameObject charname;
+    public GameObject spoken;
+    public GameObject cameraref;   
+    public Text charnametext;
+    public Text spokentext; 
+    // Awake is called before the first frame update
     void Awake()
     {
+        cameraref = GameObject.Find("Main Camera");
         sentences = new Queue<string>();
-
+        ui = GameObject.Find("UI");
+        dialogueui = ui.transform.Find("Dialogue").gameObject;
+        charname = dialogueui.transform.Find("Name").gameObject;
+        charnametext = charname.GetComponent<Text>();
+        spoken = dialogueui.transform.Find("Text").gameObject;
+        spokentext = spoken.GetComponent<Text>();
+        dialogueanim = dialogueui.GetComponent<Animator>();
     }
 
     public void dialoguestart (Dialogue dialogue) 
     {
-        Debug.Log(dialogue.name);
+        Cursor.lockState = CursorLockMode.None;
+        cameraref.GetComponent<Camera>().enabled = false;
+        dialogueanim.SetBool("IsActive", true);
+        charnametext.text = dialogue.name;
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-        displaysentence();
+        displaysentence(sentences);
     }
    
-   public void displaysentence()
+   public void displaysentence (Queue<string> queue)
    {
-       if (sentences.Count == 0)
+       if (queue.Count == 0)
        {
            enddialogue();
            return;
        }
-       string sentence = sentences.Dequeue();
-       Debug.Log(sentence);
+       string sentence = queue.Dequeue();
+       spokentext.text = sentence;
    }
     void enddialogue()
     {
-        Debug.Log("end");
+        Cursor.lockState = CursorLockMode.Locked;
+        cameraref.GetComponent<Camera>().enabled = true;
+        dialogueanim.SetBool("IsActive", false);
     }
+    
 }

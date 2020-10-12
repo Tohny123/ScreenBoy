@@ -1041,6 +1041,8 @@ GameObject:
   - component: {fileID: 258387068627383246}
   - component: {fileID: 4179370584116252337}
   - component: {fileID: 469415483619981688}
+  - component: {fileID: 5497502498340698503}
+  - component: {fileID: 8911817006766838547}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1108,6 +1110,39 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5497502498340698503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479261819099327779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60ca79033bb81d42a667e8068fb7d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueobject: {fileID: 0}
+  diatrig: {fileID: 0}
+--- !u!95 &8911817006766838547
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479261819099327779}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2123569484a806644aa785f2ee267f0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7644312236160989661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 254.18, y: 177.87988}
+  m_AnchoredPosition: {x: 254.18018, y: 177.87988}
   m_SizeDelta: {x: 508.3556, y: 78.07742}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8480042318987374359
@@ -1489,7 +1524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19.799988, y: 119.5}
+  m_AnchoredPosition: {x: 19.799805, y: 119.5}
   m_SizeDelta: {x: 615.48486, y: 502.9646}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8480042319608712732
@@ -1564,7 +1599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 254.18, y: -40.899902}
+  m_AnchoredPosition: {x: 254.18018, y: -40.899902}
   m_SizeDelta: {x: 508.35553, y: 84.36987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8480042319613216064
@@ -1644,9 +1679,9 @@ RectTransform:
   m_Father: {fileID: 258387068627383246}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 511.45, y: -62.43}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -84, y: 37.57}
   m_SizeDelta: {x: 134.19849, y: 54.269028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3241332333098799904
@@ -1730,10 +1765,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7216937896343073513, guid: 1af6db51e56e70f48837ab82fef59df6,
-          type: 3}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: displaysentence
+      - m_Target: {fileID: 5497502498340698503}
+        m_TargetAssemblyTypeName: DialogueNext, Assembly-CSharp
+        m_MethodName: nextbutton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

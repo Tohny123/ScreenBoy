@@ -5,20 +5,30 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    public GameObject cameraref;
+    public DialogueManager dialogueman;
+    public bool enabled;
+    void Start ()
+    {
+        enabled = true;
+        dialogueman = FindObjectOfType<DialogueManager>();
+    }
+
     public void triggerdialogue ()
     {
-        FindObjectOfType<DialogueManager>().dialoguestart(dialogue);
+       dialogueman.dialoguestart(dialogue);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Time.timeScale = 0f;
-            triggerdialogue();
-            Cursor.lockState = CursorLockMode.None;
-            cameraref.GetComponent<Camera>().enabled = false;
+            if(enabled == true)
+            {
+                triggerdialogue();
+                enabled = false;
+            }
+            
         }
     }
+    
 }
