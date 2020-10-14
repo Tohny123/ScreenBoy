@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public class SaveSystem
 {
 
-    
+    //save 
     public static void Save (GameManager gameman, string filename)
     {
         
@@ -16,7 +16,7 @@ public class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
     }
-
+//load
 public static PlayerData Load (GameManager gameman, string filename) 
 {
     

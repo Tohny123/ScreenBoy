@@ -23,6 +23,7 @@ public GameObject gamemanager;
 public GameManager gameman;
 void Start()
     {
+        //find gameman and character controller
         gamemanager = GameObject.Find("GameManager");
         gameman = gamemanager.GetComponent<GameManager>();
         contrl = GetComponent<CharacterController>();
@@ -31,17 +32,19 @@ void Start()
 
 void Update()
     { 
-
         if(kbcount <= 0 )
         {
+         //knockback   
             float V3y;
             V3y = V3.y;
             V3 =(transform.forward * Input.GetAxis("Vertical")) + (Input.GetAxis("Horizontal") * transform.right);
             V3 = V3.normalized * speed;
             V3.y = V3y;
+            //ground check
             if (contrl.isGrounded)
             {
                 V3.y = 0f;
+                //jump
                 if (Input.GetButtonDown("Jump"))
                 {
                     audio.PlayOneShot(jumpsound, jumpvolume);
@@ -50,11 +53,13 @@ void Update()
             }
         } else 
         {
+            //reset kbcount
             kbcount -= Time.deltaTime;
         }
+    //fall to ground after jump
     V3.y = V3.y + (Physics.gravity.y * gravityspeed * Time.deltaTime);
     contrl.Move(V3 * Time.deltaTime);
-
+    //move horizontal
     if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
     {
 
@@ -62,10 +67,11 @@ void Update()
         Quaternion newrot = Quaternion.LookRotation(new Vector3 (V3.x, 0f ,V3.z));
         model.transform.rotation = Quaternion.Slerp(model.transform.rotation, newrot, rotspeed + Time.deltaTime);
     }   
-
+    //animation
     anim.SetBool("Grounded", contrl.isGrounded);
     anim.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));
     }
+    //knockback
     public void knockback(Vector3 direction)
     {
         kbcount = kbtime;

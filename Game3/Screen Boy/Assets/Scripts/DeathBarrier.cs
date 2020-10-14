@@ -11,6 +11,7 @@ public class DeathBarrier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    //find gamemanager then get health component
     gameman = GameObject.Find("GameManager");
     heal = gameman.GetComponent<Health>();
     }
@@ -18,10 +19,12 @@ public class DeathBarrier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //set damage amount to equal player health
        death = heal.deathbarrierhealth;
     }
     private void OnTriggerEnter(Collider other)
     {
+        //when player enters deal damage
         if(other.gameObject.tag == "Player")
         {
             Vector3 dead = other.transform.position - transform.position;

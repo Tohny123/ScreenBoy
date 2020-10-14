@@ -12,11 +12,13 @@ public Fade fade;
 
 void Start()
 {
+    //find fader
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
 }
 public void gamestart(string LevelName)
 {
+//load level
 StartCoroutine(fade.LevelFade(LevelName));
 }
 

@@ -16,20 +16,18 @@ public class CoinCollect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find the volume and divide one by that volume
         audmix.GetFloat("Volume", out tempvol);
         coinvol = 1/Mathf.Abs(tempvol);
   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            //collect coin
             AudioSource.PlayClipAtPoint(coinsound, transform.position, coinvol);
             FindObjectOfType<GameManager>().CoinAdd(value);
             Instantiate(coineffect, transform.position, transform.rotation);

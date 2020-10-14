@@ -21,8 +21,10 @@ public class LevelWin : MonoBehaviour
     public float vol;
     void Start()
     {
+    //set volume of playoneshot
     audmix.GetFloat("Volume", out tempvol);
     vol = 1/Mathf.Abs(tempvol);
+    //get components
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
     winlevel = GameObject.Find("LevelWin");
@@ -34,6 +36,7 @@ public class LevelWin : MonoBehaviour
      
         if(other.gameObject.tag == "Player")
         {
+            //set level amount
             int levl = unlockedlevel - 1;
             if (gameman.levelamount < levl)
             {
@@ -41,9 +44,11 @@ public class LevelWin : MonoBehaviour
                 plrdata.levelamount = levl;  
                 
             }
+            //play audio, save, and destroy object
             AudioSource.PlayClipAtPoint(win, transform.position, vol);
             gameman.save();
             Destroy(usb, life);
+            //fade
             StartCoroutine(fade.LevelFade(LevlNam));
         }
         

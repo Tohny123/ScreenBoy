@@ -18,8 +18,11 @@ public class DialogueManager : MonoBehaviour
     // Awake is called before the first frame update
     void Awake()
     {
+        //find camera
         cameraref = GameObject.Find("Main Camera");
+        //initialize sentences
         sentences = new Queue<string>();
+        //find ui
         ui = GameObject.Find("UI");
         dialogueui = ui.transform.Find("Dialogue").gameObject;
         charname = dialogueui.transform.Find("Name").gameObject;
@@ -31,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     public void dialoguestart (Dialogue dialogue) 
     {
+        //start dialogue
         Cursor.lockState = CursorLockMode.None;
         cameraref.GetComponent<Camera>().enabled = false;
         dialogueanim.SetBool("IsActive", true);
@@ -45,6 +49,7 @@ public class DialogueManager : MonoBehaviour
    
    public void displaysentence (Queue<string> queue)
    {
+       //show sentences
        if (queue.Count == 0)
        {
            enddialogue();
@@ -55,6 +60,7 @@ public class DialogueManager : MonoBehaviour
    }
     void enddialogue()
     {
+        //reset dialogue state
         Cursor.lockState = CursorLockMode.Locked;
         cameraref.GetComponent<Camera>().enabled = true;
         dialogueanim.SetBool("IsActive", false);

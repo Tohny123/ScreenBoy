@@ -16,6 +16,7 @@ public class EnemyKill : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    //find gameman
      Health = GameObject.Find("GameManager");
     
     audmix.GetFloat("Volume", out tempvol);
@@ -27,6 +28,7 @@ public class EnemyKill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    //make inv player invincibillity
      inv = Health.GetComponent<Health>().invcount;
 
     }
@@ -36,6 +38,7 @@ public class EnemyKill : MonoBehaviour
         {
            if (inv < 0)
            {
+               //make it so that the enemy only dies when player is not invincable
                AudioSource.PlayClipAtPoint(enemydeath, transform.position, vol);
                Instantiate(particles, transform.position, transform.rotation);
                Destroy(parent);

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find player
         plr = GameObject.Find("Player");
     
     }
@@ -19,9 +20,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //find distance between enemy and player
         plrlocation = plr.transform.position;
         float distance = Vector3.Distance(plrlocation, transform.position);
+        //animation
         anim.SetFloat("Speed", (Mathf.Abs(agent.velocity.x)) + (Mathf.Abs(agent.velocity.y)));
+        //if player is in the radius chase after player
         if(distance <= radius)
         {
             agent.SetDestination(plrlocation);

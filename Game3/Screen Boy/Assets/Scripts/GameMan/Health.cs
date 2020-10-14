@@ -41,13 +41,15 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+    //find fader
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
-
+        //make heath max
         currenthealth = maxhealth;
-        //plr = FindObjectOfType<Player>();
+        //find player and set spawn to player
+        plr = FindObjectOfType<Player>();
         spawnpoint = plr.transform.position;
-
+        //audio
         audmixer.GetFloat("Volume", out tempvol);
         finalvol = 1/Mathf.Abs(tempvol);
     }
@@ -55,8 +57,11 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //make deathbarrier equal to health
         deathbarrierhealth = currenthealth;
+        //make fadecolor equal to fader color
         fadecolor = fadeimage.color;
+        //make health red when low
        if(currenthealth < 6)
        {
            
@@ -68,6 +73,7 @@ public class Health : MonoBehaviour
            HealthColor = Color.white;
            Healthtext.color = HealthColor;
        }
+       //invinciblillity and flashing
         if(invcount > 0 )
         {
             invcount -= Time.deltaTime;
@@ -83,6 +89,7 @@ public class Health : MonoBehaviour
                     plrrend.enabled = true;
                 }
         }
+        //fade to black
         if(fadeblack)
         {
             //blackscreen.color = new Color(blackscreen.color.r, blackscreen.color.g, blackscreen.color.b, Mathf.MoveTowards(blackscreen.color.a, 1f, fadespeed * Time.deltaTime));
@@ -92,6 +99,7 @@ public class Health : MonoBehaviour
                 fadeblack = false;
             }
         }
+        //fade back after death
         if(fadeback)
         {
             //blackscreen.color = new Color(blackscreen.color.r, blackscreen.color.g, blackscreen.color.b, Mathf.MoveTowards(blackscreen.color.a, 0f, fadespeed * Time.deltaTime));
@@ -102,6 +110,7 @@ public class Health : MonoBehaviour
             }
         }
     }
+    //damage player
     public void damage(int dmgamnt, Vector3 direction)
     {
         if (invcount <= 0)
@@ -120,6 +129,7 @@ public class Health : MonoBehaviour
         }
         }
     }
+    //respawn
     public void respawn()
     {
         //plr.transform.position = spawnpoint;
@@ -129,6 +139,7 @@ public class Health : MonoBehaviour
             StartCoroutine("respco");
         }
     }
+    //respawn 
     public IEnumerator respco()
     {
         
@@ -151,6 +162,7 @@ public class Health : MonoBehaviour
         plrrend.enabled = false;
         flashcount = flashlength;
     }
+    //heal
     public void heal(int healamnt)
     {
         currenthealth += healamnt;
@@ -160,6 +172,7 @@ public class Health : MonoBehaviour
             currenthealth = maxhealth;
         }
     }
+    //checkpoint
     public void setspawn(Vector3 checkpointpos)
     {
         spawnpoint = checkpointpos;

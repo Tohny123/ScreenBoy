@@ -9,12 +9,15 @@ public class DialogueTrigger : MonoBehaviour
     public bool enabled;
     void Start ()
     {
+        //make enabled true, enabled makes sure that you can't trigger dialogue twice
         enabled = true;
+        //find dialogue manager
         dialogueman = FindObjectOfType<DialogueManager>();
     }
 
     public void triggerdialogue ()
     {
+        //start dialogue using the triggers dialogue
        dialogueman.dialoguestart(dialogue);
     }
 
@@ -24,6 +27,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             if(enabled == true)
             {
+                //trigger when player colides with object
                 triggerdialogue();
                 enabled = false;
             }

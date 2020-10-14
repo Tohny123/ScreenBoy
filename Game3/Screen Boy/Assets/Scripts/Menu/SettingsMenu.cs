@@ -20,12 +20,15 @@ public class SettingsMenu : MonoBehaviour
     
     void Start()
     {
+        //load data
         load();
+        //set rotationspeed
         rotspeed = gameman.rotspd;
-    
+        //set volume to current volume
         float tempvol;
         audmix.GetFloat("Volume",out tempvol);
         volslider.value = tempvol;
+        //if rotspeed goes negative set it to 0
         if (rotspeed <= -1)
         {
             sensitivityslider.value = 0;
@@ -34,7 +37,7 @@ public class SettingsMenu : MonoBehaviour
         {
             sensitivityslider.value = rotspeed;
         }
-        
+        //set dropdown to screen resolutions
         resolutions = Screen.resolutions;
         resdropdown.ClearOptions();
         List<string> resoptions = new List<string>();
@@ -53,18 +56,18 @@ public class SettingsMenu : MonoBehaviour
         resdropdown.AddOptions(resoptions);
         resdropdown.value = curresindex;
         resdropdown.RefreshShownValue();
-
+        //quality settings value
         graphicsdropdown.value = QualitySettings.GetQualityLevel();
-
+        //set are you sere message to false
         areyousure.SetActive(false);
 
     }
-
+    //enable are you sure
     public void activateareyousure ()
     {
         areyousure.SetActive(true);
     }
-
+    //delete save
     public void savedelyes()
     {
         gameman.coinamount = 0;
@@ -72,12 +75,12 @@ public class SettingsMenu : MonoBehaviour
         SaveSystem.Save(gameman, filename);
         SceneManager.LoadScene("Menu");
     }
-
+    //close are you sure
     public void savedelno()
     {
         areyousure.SetActive(false);
     }
-
+    //set volume
     public void VolSet (float vol)
     {
         load();
@@ -85,32 +88,32 @@ public class SettingsMenu : MonoBehaviour
         audmix.SetFloat("Volume", vol);
         SaveSystem.Save(gameman, filename);
     }
-    
+    //set camspeed
     public void CamSpeed(float rotatespeed)
     {
-   
     load();
     gameman.rotspd = rotatespeed;
     SaveSystem.Save(gameman, filename);
     }
-
+    //set quality
     public void QualSet(int qualindex)
     {
         QualitySettings.SetQualityLevel(qualindex);
     }
-
+    //set fullscreen
     public void Fullscreenset(bool isfullscrn)
     {
         Screen.fullScreen = isfullscrn;
         gameman.fullscreen = isfullscrn;
         SaveSystem.Save(gameman, filename);
     }
-
+    //set resolutions
     public void ResSet(int resindex)
     {
         Resolution res = resolutions[resindex];
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
+    //load
     public void load()
     {
     PlayerData plrdata = SaveSystem.Load(gameman, filename);

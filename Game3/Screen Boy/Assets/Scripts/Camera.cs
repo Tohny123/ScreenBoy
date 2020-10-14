@@ -17,9 +17,10 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find gameman
         gamemanager = GameObject.Find("GameManager");
         gameman = gamemanager.GetComponent<GameManager>();
-    
+        //offset script
        if (!useoffset){
         offset = target.position - transform.position;
         }
@@ -30,29 +31,36 @@ public class Camera : MonoBehaviour
     }
 
     // LateUpdate is called once per frame 
+    //lateupdate is better for cameras
     void LateUpdate()
     {
+        //set camspeed to be gameman rotspeed
         camspeed = gameman.rotspd;
+        //make the pivot on the target
         pivot.transform.position = target.transform.position;
-
+        //horizontal and vertical floats 
         float horizontal = Input.GetAxis("Mouse X") * camspeed;
         pivot.Rotate(0, horizontal, 0);
 
         float vertical = Input.GetAxis("Mouse Y") * camspeed;
         pivot.Rotate(-vertical, 0, 0);
-
-        if (pivot.rotation.eulerAngles.x > maxangle && pivot.rotation.eulerAngles.x < 180f){
+        //min and max angles
+        if (pivot.rotation.eulerAngles.x > maxangle && pivot.rotation.eulerAngles.x < 180f)
+        {
             pivot.rotation = Quaternion.Euler(maxangle, pivot.rotation.eulerAngles.y, 0f);
         }
-        if (pivot.rotation.eulerAngles.x > 180 && pivot.rotation.eulerAngles.x < 360f + minangle){
+        if (pivot.rotation.eulerAngles.x > 180 && pivot.rotation.eulerAngles.x < 360f + minangle)
+        {
             pivot.rotation = Quaternion.Euler(360f + minangle, pivot.rotation.eulerAngles.y, 0f);
         }
-
+        //apply rotation
         float wantedyvalue = pivot.eulerAngles.y;
         float wantedxvalue = pivot.eulerAngles.x;
         Quaternion rotation = Quaternion.Euler(wantedxvalue, wantedyvalue, 0);
         transform.position = target.position - (rotation * offset);
-        if (transform.position.y < target.position.y){
+        //set transform.position.y to targets.position.y
+        if (transform.position.y < target.position.y)
+        {
         transform.position = new Vector3(transform.position.x, target.position.y, transform.position.z);
         }
         transform.LookAt(target);

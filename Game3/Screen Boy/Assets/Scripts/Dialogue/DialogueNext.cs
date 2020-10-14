@@ -10,11 +10,13 @@ public class DialogueNext : MonoBehaviour
     
     void Start ()
     {
+    //find dialoguetrigger
     dialogueobject = GameObject.Find("DialogueTrigger");
     diatrig = dialogueobject.GetComponent<DialogueTrigger>();
     }
     public void nextbutton ()
-    {
+    {   
+        //display sentences
         sentences = diatrig.dialogueman.sentences;
         diatrig.dialogueman.displaysentence(sentences);
         diatrig.dialogueman.sentences = sentences;

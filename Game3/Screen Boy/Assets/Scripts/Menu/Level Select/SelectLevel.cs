@@ -20,12 +20,12 @@ public class SelectLevel : MonoBehaviour
 
 void Start ()
 {
-
+    //find fader
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
-
+    //load player data
     load();
-
+    //make levels uninteractable
     for (int i = 0; i < levelButtons.Length; i++)
     {
         
@@ -36,26 +36,22 @@ void Start ()
     }
     Cursor.lockState = CursorLockMode.None;
 }
+//save
 public void save()
 {
 SaveSystem.Save(gameman, filename);
 }
+//load
 public void load()
 {
 SaveSystem.Load(gameman, filename);
 PlayerData data = SaveSystem.Load(gameman, filename);
 levelReached = data.levelamount;
 }
-
+//load level
 public void LoadLevel(string loadedlevel)
 {
-
 StartCoroutine(fade.LevelFade(loadedlevel));
 }
-void Update()
-{
-   
-}
-
 
 }

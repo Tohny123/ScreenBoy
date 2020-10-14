@@ -14,10 +14,12 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find health script
        healman = FindObjectOfType<Health>();
     }
     public void checkpointon()
     {
+        //make a new checkpoint array and disable each checkpoint
      Checkpoint[] checkarray = FindObjectsOfType<Checkpoint>();
      foreach (Checkpoint cp in checkarray)
      {
@@ -25,17 +27,15 @@ public class Checkpoint : MonoBehaviour
      }
         rend.material = Checkon;
     }
+    //change checkpoint material
     public void checkpointoff()
     {
         rend.material = Checkoff;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     private void OnTriggerEnter(Collider other)
     {
+        //enable checkpoint
         if (other.tag == "Player")
         {
             checkaudio.PlayOneShot(checksound, checkvolume);

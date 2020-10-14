@@ -16,16 +16,17 @@ public class GameManager : MonoBehaviour
     public int levelamount;
     public LevelWin levlwin;
     public float rotspd;
-    public int test;
+    //public int test;
     public PlayerData plrdata;
     public float volume;
     public bool fullscreen;
     void Start()
     { 
-        
-      load();
-       
+        //load save data  
+        load();
+       //lock cursor
        Cursor.lockState = CursorLockMode.Locked;
+       //coin text
         if (coinamount > 0)
         {
         cointext.text = ("Coins: " + coinamount);
@@ -40,25 +41,28 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-       test = plrdata.coinamount;
-
-        
+       //test = plrdata.coinamount;
+        //heath ui
         healthdisplay = Health.currenthealth;
         healthtext.text = ("Health: " + healthdisplay);
+        //fix null values
         if (coinamount == null)
         {
             coinamount = 0;
         }
     }
+    //add coins
     public void CoinAdd(int addcoin){
         coinamount += addcoin;
         cointext.text = ("Coins: " + coinamount);
     }
+    //activate save system save 
     public void save ()
     {
         SaveSystem.Save(this, filename);
         Debug.Log("Saved");
     }
+    //save system load
     public void load ()
     {
         PlayerData data = SaveSystem.Load(this, filename);
