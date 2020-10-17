@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -28,10 +29,13 @@ public class SettingsMenu : MonoBehaviour
         float tempvol;
         audmix.GetFloat("Volume",out tempvol);
         volslider.value = tempvol;
-        //if rotspeed goes negative set it to 0
-        if (rotspeed <= -1)
+        //if rotspeed is 0 set it to 8
+        if (rotspeed <= 0)
         {
-            sensitivityslider.value = 0;
+            sensitivityslider.value = 8;
+            gameman.rotspd = 8;
+            rotspeed = 8;
+            SaveSystem.Save(gameman, filename);
         }
         else
         {
@@ -70,10 +74,9 @@ public class SettingsMenu : MonoBehaviour
     //delete save
     public void savedelyes()
     {
-        gameman.coinamount = 0;
-        gameman.levelamount = 0;
-        SaveSystem.Save(gameman, filename);
-        SceneManager.LoadScene("Menu");
+        string path = Application.persistentDataPath + filename;
+        File.Delete(path);
+        SceneManager.LoadScene("Options");
     }
     //close are you sure
     public void savedelno()

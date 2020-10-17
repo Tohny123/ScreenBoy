@@ -38,6 +38,7 @@ public class Pause : MonoBehaviour
             {
                 //resume
                 ResumeGame();
+                Cursor.lockState = CursorLockMode.Locked;
             } else
             {
                 //pause
