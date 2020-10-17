@@ -2234,6 +2234,11 @@ PrefabInstance:
       propertyPath: pivot
       value: 
       objectReference: {fileID: 359060603}
+    - target: {fileID: 559905825465018032, guid: c203147e1a492fb42a2788fdcd6a01b8,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 2066937632}
     - target: {fileID: 559905825465018036, guid: c203147e1a492fb42a2788fdcd6a01b8,
         type: 3}
       propertyPath: m_LocalPosition.x

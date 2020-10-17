@@ -250,7 +250,7 @@ MonoBehaviour:
   rotspeed: 25
   pivot: {fileID: 0}
   contrl: {fileID: 559905825465018033}
-  kb: 10
+  kb: 30
   kbtime: 0.5
   model: {fileID: 8423071023345561563}
   audio: {fileID: 559905825314449641}
@@ -258,6 +258,7 @@ MonoBehaviour:
   jumpvolume: 1
   gamemanager: {fileID: 0}
   gameman: {fileID: 0}
+  cam: {fileID: 6292375734882323737, guid: a85095760201da447b1874cd4a314fe3, type: 3}
 --- !u!143 &559905825465018033
 CharacterController:
   m_ObjectHideFlags: 0

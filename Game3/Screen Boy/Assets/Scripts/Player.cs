@@ -21,20 +21,21 @@ public float jumpvolume;
 private Vector3 V3;
 public GameObject gamemanager;
 public GameManager gameman;
+public GameObject cam;
 void Start()
     {
         //find gameman and character controller
         gamemanager = GameObject.Find("GameManager");
         gameman = gamemanager.GetComponent<GameManager>();
         contrl = GetComponent<CharacterController>();
-      
+        cam = GameObject.Find("Main Camera");
     }
 
 void Update()
     { 
         if(kbcount <= 0 )
         {
-         //knockback   
+         //move   
             float V3y;
             V3y = V3.y;
             V3 =(transform.forward * Input.GetAxis("Vertical")) + (Input.GetAxis("Horizontal") * transform.right);
@@ -75,9 +76,8 @@ void Update()
     public void knockback(Vector3 direction)
     {
         kbcount = kbtime;
-        direction = new Vector3(1f, 1f, 1f);
-        V3 = direction * kb;
-        V3.y = kb;
+        //direction = new Vector3(cam.transform.position.normalized.x, cam.transform.position.y ,cam.transform.position.normalized.z);
+        V3 = cam.transform.position.normalized * kb;
     }
 
 
