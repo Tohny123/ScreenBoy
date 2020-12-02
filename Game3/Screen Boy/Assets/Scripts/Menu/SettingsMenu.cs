@@ -76,6 +76,7 @@ public class SettingsMenu : MonoBehaviour
     {
         string path = Application.persistentDataPath + filename;
         File.Delete(path);
+        UnityEditor.AssetDatabase.Refresh();
         SceneManager.LoadScene("Options");
     }
     //close are you sure

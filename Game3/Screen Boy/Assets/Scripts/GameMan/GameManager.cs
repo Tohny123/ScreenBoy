@@ -50,6 +50,10 @@ public class GameManager : MonoBehaviour
         {
             coinamount = 0;
         }
+        if (coinamount < 0)
+        {
+            coinamount = 0;
+        }
     }
     //add coins
     public void CoinAdd(int addcoin){

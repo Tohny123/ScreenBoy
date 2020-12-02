@@ -12,14 +12,16 @@ public class DialogueManager : MonoBehaviour
     public Animator dialogueanim;
     public GameObject charname;
     public GameObject spoken;
-    public GameObject cameraref;   
+    public GameObject cameraref;
+    public GameObject plrref;   
     public Text charnametext;
     public Text spokentext; 
     // Awake is called before the first frame update
     void Awake()
     {
-        //find camera
+        //find camera and player
         cameraref = GameObject.Find("Main Camera");
+        plrref = GameObject.Find("Player");
         //initialize sentences
         sentences = new Queue<string>();
         //find ui
@@ -36,6 +38,7 @@ public class DialogueManager : MonoBehaviour
     {
         //start dialogue
         Cursor.lockState = CursorLockMode.None;
+        plrref.GetComponent<Player>().enabled = false;
         cameraref.GetComponent<Camera>().enabled = false;
         dialogueanim.SetBool("IsActive", true);
         charnametext.text = dialogue.name;
@@ -62,6 +65,7 @@ public class DialogueManager : MonoBehaviour
     {
         //reset dialogue state
         Cursor.lockState = CursorLockMode.Locked;
+        plrref.GetComponent<Player>().enabled = true;
         cameraref.GetComponent<Camera>().enabled = true;
         dialogueanim.SetBool("IsActive", false);
     }
