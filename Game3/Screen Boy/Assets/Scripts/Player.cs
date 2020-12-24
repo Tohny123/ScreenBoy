@@ -18,7 +18,7 @@ public GameObject model;
 public AudioSource audio;
 public AudioClip jumpsound;
 public float jumpvolume;
-private Vector3 V3;
+public Vector3 V3;
 public GameObject gamemanager;
 public GameManager gameman;
 public GameObject cam;

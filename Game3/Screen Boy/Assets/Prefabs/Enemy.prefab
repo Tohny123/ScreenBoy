@@ -53,6 +53,9 @@ MonoBehaviour:
   audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   vol: 0
   tempvol: 0
+  plrobj: {fileID: 0}
+  plr: {fileID: 0}
+  bounceheight: 0
 --- !u!1 &4341496129417097988
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +173,9 @@ MonoBehaviour:
   audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   vol: 0
   tempvol: 0
+  plrobj: {fileID: 0}
+  plr: {fileID: 0}
+  bounceheight: 60
 --- !u!1 &6963514834726556739
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +293,9 @@ MonoBehaviour:
   audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   vol: 0
   tempvol: 0
+  plrobj: {fileID: 0}
+  plr: {fileID: 0}
+  bounceheight: 60
 --- !u!1 &6963514834988218232
 GameObject:
   m_ObjectHideFlags: 0

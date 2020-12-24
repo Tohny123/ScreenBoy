@@ -13,12 +13,16 @@ public class EnemyKill : MonoBehaviour
     public AudioMixer audmix;
     public float vol;
     public float tempvol;
+    public GameObject plrobj;
+    public Player plr;
+    public float bounceheight;
     // Start is called before the first frame update
     void Start()
     {
-    //find gameman
-     Health = GameObject.Find("GameManager");
-    
+    //find objects
+    Health = GameObject.Find("GameManager");
+    plrobj = GameObject.Find("Player");
+    plr = plrobj.GetComponent<Player>();
     audmix.GetFloat("Volume", out tempvol);
     vol = 1/Mathf.Abs(tempvol);
 
@@ -42,6 +46,7 @@ public class EnemyKill : MonoBehaviour
                AudioSource.PlayClipAtPoint(enemydeath, transform.position, vol);
                Instantiate(particles, transform.position, transform.rotation);
                Destroy(parent);
+               plr.V3.y = bounceheight;
            }
             
         }

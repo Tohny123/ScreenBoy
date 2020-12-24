@@ -75,8 +75,14 @@ public class SettingsMenu : MonoBehaviour
     public void savedelyes()
     {
         string path = Application.persistentDataPath + filename;
-        File.Delete(path);
-        UnityEditor.AssetDatabase.Refresh();
+        Debug.Log(File.Exists(path));
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        Debug.Log(File.Exists(path));
+        Debug.Log(path);
+        //UnityEditor.AssetDatabase.Refresh();
         SceneManager.LoadScene("Options");
     }
     //close are you sure
