@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Checkpoint : MonoBehaviour
 {
@@ -11,11 +12,15 @@ public class Checkpoint : MonoBehaviour
     public AudioSource checkaudio;
     public AudioClip checksound;
     public float checkvolume;
+    public float tempvol;
+    public AudioMixer audmix;
     // Start is called before the first frame update
     void Start()
     {
         //find health script
-       healman = FindObjectOfType<Health>();
+        healman = FindObjectOfType<Health>();
+        audmix.GetFloat("Volume", out tempvol);
+        checkvolume = 1/Mathf.Abs(tempvol + 1);
     }
     public void checkpointon()
     {

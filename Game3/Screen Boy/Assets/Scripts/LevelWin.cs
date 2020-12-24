@@ -23,7 +23,7 @@ public class LevelWin : MonoBehaviour
     {
     //set volume of playoneshot
     audmix.GetFloat("Volume", out tempvol);
-    vol = 1/Mathf.Abs(tempvol);
+    vol = 1/Mathf.Abs(tempvol+1);
     //get components
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();

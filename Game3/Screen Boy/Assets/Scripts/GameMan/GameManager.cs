@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         {
         cointext.text = ("Coins: 0");
         }
+        // fix null values
     }
 
   

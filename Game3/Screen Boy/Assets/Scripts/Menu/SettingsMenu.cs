@@ -25,6 +25,7 @@ public class SettingsMenu : MonoBehaviour
         load();
         //set rotationspeed
         rotspeed = gameman.rotspd;
+
         //set volume to current volume
         float tempvol;
         audmix.GetFloat("Volume",out tempvol);

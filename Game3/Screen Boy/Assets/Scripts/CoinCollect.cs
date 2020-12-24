@@ -18,7 +18,7 @@ public class CoinCollect : MonoBehaviour
     {
         //find the volume and divide one by that volume
         audmix.GetFloat("Volume", out tempvol);
-        coinvol = 1/Mathf.Abs(tempvol);
+        coinvol = 1/Mathf.Abs(tempvol+1);
   
     }
 
