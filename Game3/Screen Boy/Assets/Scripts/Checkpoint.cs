@@ -20,7 +20,7 @@ public class Checkpoint : MonoBehaviour
         //find health script
         healman = FindObjectOfType<Health>();
         audmix.GetFloat("Volume", out tempvol);
-        checkvolume = 1/Mathf.Abs(tempvol + 1);
+        checkvolume = 1/Mathf.Abs(tempvol);
     }
     public void checkpointon()
     {

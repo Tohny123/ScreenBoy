@@ -24,7 +24,7 @@ public class EnemyKill : MonoBehaviour
     plrobj = GameObject.Find("Player");
     plr = plrobj.GetComponent<Player>();
     audmix.GetFloat("Volume", out tempvol);
-    vol = 1/Mathf.Abs(tempvol+1);
+    vol = 1/Mathf.Abs(tempvol);
 
 
     }
