@@ -14,6 +14,7 @@ public class Checkpoint : MonoBehaviour
     public float checkvolume;
     public float tempvol;
     public AudioMixer audmix;
+    public GameObject model;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +31,12 @@ public class Checkpoint : MonoBehaviour
      {
          cp.checkpointoff();
      }
-        rend.material = Checkon;
+        model.GetComponent<Renderer>().material = Checkon;
     }
     //change checkpoint material
     public void checkpointoff()
     {
-        rend.material = Checkoff;
+        model.GetComponent<Renderer>().material = Checkoff;
     }
     
     private void OnTriggerEnter(Collider other)
