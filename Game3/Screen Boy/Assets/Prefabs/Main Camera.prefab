@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
-  maxangle: 50
+  maxangle: 60
   minangle: -60
   useoffset: 0
   camspeed: 8
