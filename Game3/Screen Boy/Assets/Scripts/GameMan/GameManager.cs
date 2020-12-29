@@ -36,6 +36,10 @@ public class GameManager : MonoBehaviour
         cointext.text = ("Coins: 0");
         }
         // fix null values
+        if (rotspd <= 0)
+        {
+            rotspd = 8;
+        }
     }
 
   
