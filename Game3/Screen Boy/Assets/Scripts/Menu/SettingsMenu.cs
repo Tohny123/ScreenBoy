@@ -84,6 +84,8 @@ public class SettingsMenu : MonoBehaviour
         Debug.Log(File.Exists(path));
         Debug.Log(path);
         //UnityEditor.AssetDatabase.Refresh();
+        SaveSystem.Save(gameman, filename);
+        load();
         SceneManager.LoadScene("Options");
     }
     //close are you sure
