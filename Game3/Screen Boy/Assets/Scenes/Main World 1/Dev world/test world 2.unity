@@ -662,6 +662,9 @@ MonoBehaviour:
   checkaudio: {fileID: 1064898555}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
+  tempvol: 0
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  model: {fileID: 737908295}
 --- !u!65 &737908298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -814,6 +817,9 @@ MonoBehaviour:
   checkaudio: {fileID: 1013355226}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
+  tempvol: 0
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  model: {fileID: 1012238464}
 --- !u!65 &1012238467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1239,6 +1245,9 @@ MonoBehaviour:
   checkaudio: {fileID: 537681186}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
+  tempvol: 0
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  model: {fileID: 1160800692}
 --- !u!65 &1160800695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2079,6 +2088,9 @@ MonoBehaviour:
   checkaudio: {fileID: 672810928}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
+  tempvol: 0
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  model: {fileID: 2101376805}
 --- !u!65 &2101376807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2436,7 +2448,7 @@ PrefabInstance:
     - target: {fileID: 2395263552166837680, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.71
+      value: -0.28999996
       objectReference: {fileID: 0}
     - target: {fileID: 2395263552166837680, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
         type: 3}
