@@ -1672,5 +1672,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1051148573}
+    - target: {fileID: 6292375734882323741, guid: a85095760201da447b1874cd4a314fe3,
+        type: 3}
+      propertyPath: maxangle
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85095760201da447b1874cd4a314fe3, type: 3}
