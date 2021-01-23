@@ -75,18 +75,10 @@ public class SettingsMenu : MonoBehaviour
     //delete save
     public void savedelyes()
     {
-        string path = Application.persistentDataPath + filename;
-        Debug.Log(File.Exists(path));
-        if (File.Exists(path))
-        {
-            File.Delete(path);
-        }
-        Debug.Log(File.Exists(path));
-        Debug.Log(path);
-        //UnityEditor.AssetDatabase.Refresh();
-        SaveSystem.Save(gameman, filename);
-        load();
-        SceneManager.LoadScene("Options");
+    gameman.coinamount = 0;
+    gameman.levelamount = 0;
+    SaveSystem.Save(gameman, filename);
+    SceneManager.LoadScene("Menu");
     }
     //close are you sure
     public void savedelno()
