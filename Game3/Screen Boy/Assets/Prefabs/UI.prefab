@@ -1422,6 +1422,7 @@ GameObject:
   - component: {fileID: 8480042318987374357}
   - component: {fileID: 8480042318987374359}
   - component: {fileID: 8480042318987374356}
+  - component: {fileID: 3196911029574113723}
   m_Layer: 5
   m_Name: Health Text
   m_TagString: Untagged
@@ -1445,7 +1446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 254.18018, y: 177.87988}
+  m_AnchoredPosition: {x: 281.19882, y: 177.87988}
   m_SizeDelta: {x: 508.3556, y: 78.07742}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8480042318987374359
@@ -1490,6 +1491,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Health:'
+--- !u!114 &3196911029574113723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480042318987374354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.014907437, g: 0.2500467, b: 0.6320754, a: 0.5}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8480042319608712731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1592,7 @@ GameObject:
   - component: {fileID: 8480042319613216190}
   - component: {fileID: 8480042319613216064}
   - component: {fileID: 8480042319613216065}
+  - component: {fileID: 375092337853951789}
   m_Layer: 5
   m_Name: Coins
   m_TagString: Untagged
@@ -1599,7 +1616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 254.18018, y: -40.899902}
+  m_AnchoredPosition: {x: 281.19882, y: -40.899902}
   m_SizeDelta: {x: 508.35553, y: 84.36987}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8480042319613216064
@@ -1644,6 +1661,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Coins: 0 '
+--- !u!114 &375092337853951789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480042319613216191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.014907437, g: 0.2500467, b: 0.6320754, a: 0.5}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8902302304232235475
 GameObject:
   m_ObjectHideFlags: 0
