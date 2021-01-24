@@ -540,7 +540,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 197
+      value: 192.75
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
@@ -550,27 +550,27 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 200
+      value: 269
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.11369454
+      value: -0.008239019
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.97456753
+      value: -0.9012283
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.06409662
+      value: -0.007717985
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18216296
+      value: 0.43319774
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
@@ -580,17 +580,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 4.7900004
+      value: -1.206
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -158.227
+      value: -128.66
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 14.2300005
+      value: 0.468
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 077fff1c360f49546b295e9f28b39f7a,
         type: 3}
@@ -1105,7 +1105,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 42
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
