@@ -2028,6 +2028,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2395263552166837684, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: I don't know why we use usb's
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395263552166837684, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: I mean if it works, it works
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395263552166837684, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: but it sucks
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395263552166837684, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
+        type: 3}
+      propertyPath: dialogue.name
+      value: Joe
+      objectReference: {fileID: 0}
     - target: {fileID: 2395263552166837685, guid: 24bfd4f3a0633fa458e5e5be23ab5a0f,
         type: 3}
       propertyPath: m_Name
