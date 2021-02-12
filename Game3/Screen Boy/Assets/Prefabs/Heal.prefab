@@ -50,6 +50,10 @@ MonoBehaviour:
   parent: {fileID: 7890425396631583965}
   particles: {fileID: 5033794734628077603, guid: b676c511ee187bf459e8d1ed1540bd11,
     type: 3}
+  healsound: {fileID: 8300000, guid: 319b9884d5a420949bbd5cdba26a150a, type: 3}
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  tempvol: 0
+  healvol: 0
 --- !u!1 &7890425396631583965
 GameObject:
   m_ObjectHideFlags: 0
