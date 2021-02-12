@@ -32,19 +32,21 @@ public class Pause : MonoBehaviour
     void Update()
     {
         //find if player presses escape
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (gamepause)
+       
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                //resume
-                ResumeGame();
-                Cursor.lockState = CursorLockMode.Locked;
-            } else
-            {
-                //pause
-                PauseGame();
+                if (gamepause)
+                {
+                    //resume
+                    ResumeGame();
+                    Cursor.lockState = CursorLockMode.Locked;
+                } else
+                {
+                        //pause
+                        PauseGame();
+                }
             }
-        }
+        
     }
 
 public void ResumeGame () 

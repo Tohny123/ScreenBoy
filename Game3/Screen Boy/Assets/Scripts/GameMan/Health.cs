@@ -154,6 +154,7 @@ public class Health : MonoBehaviour
         fadeback = true;
         isrespawn= false;
         plr.transform.position = spawnpoint;
+        plr.transform.parent = null;
         plr.gameObject.SetActive(true);
         
         currenthealth = maxhealth;

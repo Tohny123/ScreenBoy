@@ -13,15 +13,18 @@ public class DialogueManager : MonoBehaviour
     public GameObject charname;
     public GameObject spoken;
     public GameObject cameraref;
-    public GameObject plrref;   
+    public GameObject plrref;  
+    public GameObject uiref;
+ 
     public Text charnametext;
     public Text spokentext; 
     // Awake is called before the first frame update
     void Awake()
     {
-        //find camera and player
+        //find camera, player, and pause menu
         cameraref = GameObject.Find("Main Camera");
         plrref = GameObject.Find("Player");
+        uiref = GameObject.Find("UI");
         //initialize sentences
         sentences = new Queue<string>();
         //find ui
@@ -40,6 +43,7 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         plrref.GetComponent<Player>().enabled = false;
         cameraref.GetComponent<Camera>().enabled = false;
+        uiref.GetComponent<Pause>().enabled = false;
         dialogueanim.SetBool("IsActive", true);
         charnametext.text = dialogue.name;
         sentences.Clear();
@@ -67,6 +71,7 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         plrref.GetComponent<Player>().enabled = true;
         cameraref.GetComponent<Camera>().enabled = true;
+        uiref.GetComponent<Pause>().enabled = true;
         dialogueanim.SetBool("IsActive", false);
     }
     
