@@ -6,13 +6,11 @@ using UnityEngine.Audio;
 public class EnemyKill : MonoBehaviour
 {
     public GameObject parent;
-    public GameObject Health;
+    public GameObject gameman;
     public GameObject particles;
     public float inv;
     public AudioClip enemydeath;
-    public AudioMixer audmix;
     public float vol;
-    public float tempvol;
     public GameObject plrobj;
     public Player plr;
     public float bounceheight;
@@ -20,12 +18,12 @@ public class EnemyKill : MonoBehaviour
     void Start()
     {
     //find objects
-    Health = GameObject.Find("GameManager");
+    gameman = GameObject.Find("GameManager");
     plrobj = GameObject.Find("Player");
     plr = plrobj.GetComponent<Player>();
-    audmix.GetFloat("Volume", out tempvol);
-    vol = 1/Mathf.Abs(tempvol);
-
+    //set vol
+    gameman.GetComponent<GameManager>().volnormal();
+    vol = gameman.GetComponent<GameManager>().vol;
 
     }
 
@@ -33,7 +31,7 @@ public class EnemyKill : MonoBehaviour
     void Update()
     {
     //make inv player invincibillity
-     inv = Health.GetComponent<Health>().invcount;
+     inv = gameman.GetComponent<Health>().invcount;
 
     }
     private void OnTriggerEnter(Collider other)

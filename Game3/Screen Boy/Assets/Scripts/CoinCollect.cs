@@ -10,15 +10,14 @@ public class CoinCollect : MonoBehaviour
     public int value;
     public float coinvol;
     public GameObject coineffect;
-    public AudioMixer audmix;
-    public float tempvol;
-    
+    public GameManager gameman;
     // Start is called before the first frame update
     void Start()
     {
         //find the volume and divide one by that volume
-        audmix.GetFloat("Volume", out tempvol);
-        coinvol = 1/Mathf.Abs(tempvol);
+        gameman = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameman.volnormal();
+        coinvol = gameman.vol;
   
     }
 

@@ -11,16 +11,15 @@ public class healplr : MonoBehaviour
     public GameObject parent;
     public GameObject particles;
     public AudioClip healsound;
-    public AudioMixer audmix;
-    public float tempvol; 
     public float healvol;   
     // Start is called before the first frame update
     void Start()
     {
         gameman = GameObject.Find("GameManager");
         health = gameman.GetComponent<Health>();
-        audmix.GetFloat("Volume", out tempvol);
-        healvol = 1/Mathf.Abs(tempvol);        
+        gameman.GetComponent<GameManager>().volnormal();
+        healvol = gameman.GetComponent<GameManager>().vol;
+        Debug.Log(healvol);        
     }
 
     private void OnTriggerEnter(Collider other)

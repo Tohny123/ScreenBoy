@@ -12,16 +12,17 @@ public class Checkpoint : MonoBehaviour
     public AudioSource checkaudio;
     public AudioClip checksound;
     public float checkvolume;
-    public float tempvol;
-    public AudioMixer audmix;
     public GameObject model;
+    public GameManager gameman;
     // Start is called before the first frame update
     void Start()
     {
         //find health script
         healman = FindObjectOfType<Health>();
-        audmix.GetFloat("Volume", out tempvol);
-        checkvolume = 1/Mathf.Abs(tempvol);
+        gameman = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameman.volnormal();
+        checkvolume = gameman.vol;
+        Debug.Log(checkvolume);
     }
     public void checkpointon()
     {

@@ -29,6 +29,9 @@ void Start()
         gameman = gamemanager.GetComponent<GameManager>();
         contrl = GetComponent<CharacterController>();
         cam = GameObject.Find("Main Camera");
+        //set vol of jump
+        gameman.volnormal();
+        jumpvolume = gameman.vol;
     }
 
 void Update()

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.Audio;
 public class GameManager : MonoBehaviour
 {
     public int coinamount;
@@ -20,8 +21,11 @@ public class GameManager : MonoBehaviour
     public PlayerData plrdata;
     public float volume;
     public bool fullscreen;
+    public AudioMixer audmix;
+    public float vol;
     void Start()
     { 
+
         //load save data  
         load();
        //lock cursor
@@ -81,6 +85,12 @@ public class GameManager : MonoBehaviour
         volume = data.volume;
         fullscreen = data.fullscreen;
         Debug.Log("Loading");
+    }
+    public void volnormal ()
+    {
+        float tempvol;
+        audmix.GetFloat("Volume", out tempvol);
+        vol = Mathf.InverseLerp (-80,1,tempvol);
     }
 
 }

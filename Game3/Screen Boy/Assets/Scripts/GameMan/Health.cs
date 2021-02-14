@@ -30,28 +30,28 @@ public class Health : MonoBehaviour
     public Text Healthtext;
     public Color HealthColor;
     public AudioClip alert;
-    public AudioMixer audmixer;
-    public float tempvol;
-    public float finalvol;
     public GameObject fader;
     public Fade fade;
     public Color fadecolor;
     public Image fadeimage;
+    public GameManager gameman;
 
     // Start is called before the first frame update
     void Start()
     {
-    //find fader
-    fader = GameObject.Find("Fade");
-    fade = fader.GetComponent<Fade>();
+        //find gameman
+        gameman = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //find fader
+        fader = GameObject.Find("Fade");
+        fade = fader.GetComponent<Fade>();
         //make heath max
         currenthealth = maxhealth;
         //find player and set spawn to player
         plr = FindObjectOfType<Player>();
         spawnpoint = plr.transform.position;
         //audio
-        audmixer.GetFloat("Volume", out tempvol);
-        finalvol = 1/Mathf.Abs(tempvol);
+        gameman.volnormal();
+        hurtvolume = gameman.vol;
     }
 
     // Update is called once per frame
@@ -144,7 +144,7 @@ public class Health : MonoBehaviour
     {
         
         isrespawn = true;
-        AudioSource.PlayClipAtPoint(gameoversound, plr.transform.position, finalvol);
+        AudioSource.PlayClipAtPoint(gameoversound, plr.transform.position, hurtvolume);
         Instantiate(deathparticle, plr.transform.position, plr.transform.rotation);
         plr.gameObject.SetActive(false);
 

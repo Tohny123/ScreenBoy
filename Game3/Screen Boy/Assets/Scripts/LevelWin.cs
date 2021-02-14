@@ -16,19 +16,19 @@ public class LevelWin : MonoBehaviour
     public GameObject usb;
     public GameObject winlevel;
     public AudioClip win;
-    public AudioMixer audmix;
-    public float tempvol;
+
     public float vol;
     void Start()
     {
-    //set volume of playoneshot
-    audmix.GetFloat("Volume", out tempvol);
-    vol = 1/Mathf.Abs(tempvol);
     //get components
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
     winlevel = GameObject.Find("LevelWin");
     usb = winlevel.transform.Find("USB").gameObject;
+    gameman = GameObject.Find("GameManager").GetComponent<GameManager>();
+    //set volume
+    gameman.volnormal();
+    vol = gameman.vol;
     }
     
     private void OnTriggerEnter(Collider other)

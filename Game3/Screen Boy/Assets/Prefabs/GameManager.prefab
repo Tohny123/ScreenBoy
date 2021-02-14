@@ -54,7 +54,6 @@ MonoBehaviour:
   levelamount: 0
   levlwin: {fileID: 7940368954275241771, guid: 7b17652227bb8144cabf8bd92694cf91, type: 3}
   rotspd: 0
-  test: 0
   plrdata:
     coinamount: 0
     levelamount: 0
@@ -63,6 +62,7 @@ MonoBehaviour:
     fullscreen: 0
   volume: 0
   fullscreen: 0
+  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
 --- !u!114 &1606314640886676182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca46d5560dacd444bf42b8bcd59278c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  dialogueui: {fileID: 0}
+  dialogueanim: {fileID: 0}
+  charname: {fileID: 0}
+  spoken: {fileID: 0}
+  cameraref: {fileID: 0}
+  plrref: {fileID: 0}
+  uiref: {fileID: 0}
+  charnametext: {fileID: 0}
+  spokentext: {fileID: 0}
