@@ -18,7 +18,6 @@ public class FallingPlatform : MonoBehaviour
         anim = parent.GetComponent<Animator>();
         boxcol = parent.GetComponent<Collider>();
         layerindex = anim.GetLayerIndex("Base Layer");
-        Debug.Log(layerindex);
         rend = parent.GetComponent<Renderer>();
         dissapeartime = anim.GetCurrentAnimatorStateInfo(layerindex).length;
 

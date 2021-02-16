@@ -75,10 +75,10 @@ public class SettingsMenu : MonoBehaviour
     //delete save
     public void savedelyes()
     {
-    gameman.coinamount = 0;
-    gameman.levelamount = 0;
-    SaveSystem.Save(gameman, filename);
-    SceneManager.LoadScene("Menu");
+        gameman.levelamount = 0;
+        gameman.coinamount = 0;
+        SaveSystem.Save(gameman, filename);
+        SceneManager.LoadScene("Menu");
     }
     //close are you sure
     public void savedelno()
