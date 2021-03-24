@@ -12,6 +12,7 @@ public class ValueSet : MonoBehaviour
     public float rotationspeed;
     public float volume;
     public bool fullscreen;
+    public bool watchedyet;
     
     void Start()
     {
@@ -24,6 +25,10 @@ public class ValueSet : MonoBehaviour
         {
             volume = 1;
         }
+        if(watchedyet != true)
+        {
+            watchedyet = false;
+        }
     }
 
     public void load()
@@ -34,6 +39,7 @@ public class ValueSet : MonoBehaviour
         rotationspeed = data.rotationspeed;
         volume = data.volume;
         fullscreen = data.fullscreen;
+        watchedyet = data.watchedyet;
         Debug.Log("Loading");        
     }
 

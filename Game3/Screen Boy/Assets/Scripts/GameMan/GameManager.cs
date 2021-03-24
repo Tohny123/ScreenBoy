@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public bool fullscreen;
     public AudioMixer audmix;
     public float vol;
+    public bool watchedyet;
+
     void Start()
     { 
 

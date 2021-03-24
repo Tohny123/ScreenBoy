@@ -71,4 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main World 1/Dev world/test world.unity
     guid: a0611cc18981d384c94250ae3198b7ea
+  - enabled: 1
+    path: Assets/Scenes/Menus/Cutscenes/Opening Cutscene.unity
+    guid: 1b75f2d7ffa3ca849b7c0a0b1580457d
   m_configObjects: {}

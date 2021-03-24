@@ -77,6 +77,7 @@ public class SettingsMenu : MonoBehaviour
     {
         gameman.levelamount = 0;
         gameman.coinamount = 0;
+        gameman.watchedyet = false;
         SaveSystem.Save(gameman, filename);
         SceneManager.LoadScene("Menu");
     }
@@ -127,5 +128,6 @@ public class SettingsMenu : MonoBehaviour
     gameman.levelamount = plrdata.levelamount;
     gameman.fullscreen = plrdata.fullscreen;
     gameman.volume = plrdata.volume;
+    gameman.watchedyet = plrdata.watchedyet;
     }
 }

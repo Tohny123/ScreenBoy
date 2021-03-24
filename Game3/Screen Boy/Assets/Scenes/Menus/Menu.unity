@@ -615,6 +615,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 0}
   fade: {fileID: 0}
+  gameman: {fileID: 0}
+  filename: /Save.Sv
+  levelnames:
+  - Level Select
+  - Opening Cutscene
+  levelchosen: 
 --- !u!114 &246177131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,6 +639,7 @@ MonoBehaviour:
   rotationspeed: 0
   volume: 0
   fullscreen: 0
+  watchedyet: 1
 --- !u!1001 &292840892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1491,9 +1498,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 246177130}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: gamestart
-        m_Mode: 5
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
+        m_MethodName: startif
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

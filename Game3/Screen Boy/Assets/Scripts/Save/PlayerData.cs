@@ -8,6 +8,7 @@ public class PlayerData
     public float rotationspeed;
     public float volume;
     public bool fullscreen;
+    public bool watchedyet;
     public PlayerData (GameManager gameman)
     {
         levelamount = gameman.levelamount;
@@ -15,5 +16,7 @@ public class PlayerData
         rotationspeed = gameman.rotspd;
         volume = gameman.volume;
         fullscreen = gameman.fullscreen;
+        watchedyet = gameman.watchedyet;
+
     }
 }

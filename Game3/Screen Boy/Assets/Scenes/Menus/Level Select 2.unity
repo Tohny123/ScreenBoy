@@ -1976,6 +1976,7 @@ MonoBehaviour:
     rotationspeed: 0
     volume: 0
     fullscreen: 0
+    watchedyet: 0
   gameman: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6, type: 3}
   levelButtons:
   - {fileID: 1009203417}
@@ -2258,6 +2259,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 0}
   fade: {fileID: 0}
+  gameman: {fileID: 0}
+  filename: /Save.Sv
+  levelnames: []
+  levelchosen: 
 --- !u!1001 &1426224141
 PrefabInstance:
   m_ObjectHideFlags: 0
