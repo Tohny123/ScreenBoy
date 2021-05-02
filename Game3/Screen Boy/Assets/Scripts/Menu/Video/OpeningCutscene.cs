@@ -27,6 +27,9 @@ public class OpeningCutscene : MonoBehaviour
         fade = GameObject.Find("Fade").GetComponent<Fade>();
         gameman.watchedyet = true;
         SaveSystem.Save(gameman, filename);
+        gameman.volnormal();
+        vid.SetDirectAudioVolume(1, gameman.vol);
+     
     }
 
     // Update is called once per frame
@@ -36,10 +39,15 @@ public class OpeningCutscene : MonoBehaviour
         {
             vidtime -= Time.deltaTime;
         }
-        else if (vidtime < 0)
+        else if (vidtime < 0 )
         {
             StartCoroutine(fade.LevelFade(levelnext));
         }
+        if (Input.GetKeyDown("space"))
+        {
+            StartCoroutine(fade.LevelFade(levelnext));
+        }
+        
     }
     public void load()
     {

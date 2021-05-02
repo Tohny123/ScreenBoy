@@ -35,7 +35,7 @@ void Start()
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
     
-    if(data.watchedyet == true)
+    if (data.watchedyet == true)
     {
         levelchosen = levelnames[0];
     }
