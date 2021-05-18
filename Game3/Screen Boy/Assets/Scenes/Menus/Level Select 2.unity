@@ -1240,8 +1240,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1371840411}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: gamestart
+        m_TargetAssemblyTypeName: LevelLoad, Assembly-CSharp
+        m_MethodName: load
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2090,8 +2090,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1371840411}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: gamestart
+        m_TargetAssemblyTypeName: LevelLoad, Assembly-CSharp
+        m_MethodName: load
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2254,15 +2254,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1371840406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a86dab77eed20b4aae9b961d6bea530, type: 3}
+  m_Script: {fileID: 11500000, guid: 86578d5d451372c4eb6c8256c53c1712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fader: {fileID: 0}
   fade: {fileID: 0}
-  gameman: {fileID: 0}
-  filename: /Save.Sv
-  levelnames: []
-  levelchosen: 
 --- !u!1001 &1426224141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2660,8 +2655,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1371840411}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: gamestart
+        m_TargetAssemblyTypeName: LevelLoad, Assembly-CSharp
+        m_MethodName: load
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
