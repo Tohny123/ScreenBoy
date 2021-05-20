@@ -9,33 +9,22 @@ public class StartGame : MonoBehaviour
 
 public GameObject fader;
 public Fade fade;
-public GameManager gameman = new GameManager();
+public GameManager gameman;
 public string filename;
 public string[] levelnames;
 public string levelchosen;
 public static SaveSystem savesystem = new SaveSystem();
-    public int coinamount;
-    public int levelamount;
-    public float rotationspeed;
-    public float volume;
-    public bool fullscreen;
     public bool watchedyet;
 
 void Start()
 {
-    PlayerData data = SaveSystem.Load(gameman, filename);
-        coinamount = data.coinamount;
-        levelamount = data.levelamount;
-        rotationspeed = data.rotationspeed;
-        volume = data.volume;
-        fullscreen = data.fullscreen;
-        watchedyet = data.watchedyet;
+    
 
     //find fader
     fader = GameObject.Find("Fade");
     fade = fader.GetComponent<Fade>();
     
-    if (data.watchedyet == true)
+    if (gameman.watchedyet == true)
     {
         levelchosen = levelnames[0];
     }
@@ -53,6 +42,16 @@ public void startif()
 {
 StartCoroutine(fade.LevelFade(levelchosen));
 
+}
+public void load()
+{
+PlayerData data = SaveSystem.Load(gameman, filename);
+        gameman.coinamount = data.coinamount;
+        gameman.levelamount = data.levelamount;
+        gameman.rotspd = data.rotationspeed;
+        gameman.volume = data.volume;
+        gameman.fullscreen = data.fullscreen;
+        gameman.watchedyet = data.watchedyet;
 }
 
 }

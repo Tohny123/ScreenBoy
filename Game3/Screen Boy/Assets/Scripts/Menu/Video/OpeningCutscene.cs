@@ -12,11 +12,6 @@ public class OpeningCutscene : MonoBehaviour
     public Fade fade;
     public GameManager gameman;
     public string filename;
-    public int coinamount;
-    public int levelamount;
-    public float rotationspeed;
-    public float volume;
-    public bool fullscreen;
     public static SaveSystem savesystem = new SaveSystem();
 
     // Start is called before the first frame update
@@ -52,10 +47,10 @@ public class OpeningCutscene : MonoBehaviour
     public void load()
     {
         PlayerData data = SaveSystem.Load(gameman, filename);
-        coinamount = data.coinamount;
-        levelamount = data.levelamount;
-        rotationspeed = data.rotationspeed;
-        volume = data.volume;
-        fullscreen = data.fullscreen;
+        gameman.coinamount = data.coinamount;
+        gameman.levelamount = data.levelamount;
+        gameman.rotspd = data.rotationspeed;
+        gameman.volume = data.volume;
+        gameman.fullscreen = data.fullscreen;
     }
 }

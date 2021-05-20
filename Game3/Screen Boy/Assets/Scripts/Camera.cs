@@ -6,6 +6,7 @@ public class Camera : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset; 
+    public Vector3 trueoffset;
     public float maxangle;
     public float minangle;
     public bool useoffset;
@@ -23,6 +24,10 @@ public class Camera : MonoBehaviour
         //offset script
        if (!useoffset){
         offset = target.position - transform.position;
+        }
+        else
+        {
+            offset = target.position + trueoffset;
         }
     pivot.transform.position = target.transform.position;
     //pivot.transform.parent = target.transform;

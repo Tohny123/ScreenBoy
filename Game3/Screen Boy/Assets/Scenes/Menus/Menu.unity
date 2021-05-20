@@ -616,17 +616,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fader: {fileID: 0}
   fade: {fileID: 0}
-  gameman: {fileID: 0}
+  gameman: {fileID: 1606314640886676180, guid: 1af6db51e56e70f48837ab82fef59df6, type: 3}
   filename: /Save.Sv
   levelnames:
   - Level Select
   - Opening Cutscene
   levelchosen: 
-  coinamount: 0
-  levelamount: 0
-  rotationspeed: 0
-  volume: 0
-  fullscreen: 0
   watchedyet: 0
 --- !u!114 &246177131
 MonoBehaviour:

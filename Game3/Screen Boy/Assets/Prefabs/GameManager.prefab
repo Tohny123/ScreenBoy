@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1606314640886676183}
   - component: {fileID: 1606314640886676180}
   - component: {fileID: 1606314640886676182}
-  - component: {fileID: 8371043205715261379}
   - component: {fileID: 7216937896343073513}
   m_Layer: 0
   m_Name: GameManager
@@ -60,9 +59,12 @@ MonoBehaviour:
     rotationspeed: 0
     volume: 0
     fullscreen: 0
+    watchedyet: 0
   volume: 0
   fullscreen: 0
   audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
+  vol: 0
+  watchedyet: 0
 --- !u!114 &1606314640886676182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,28 +96,12 @@ MonoBehaviour:
   Healthtext: {fileID: 0}
   HealthColor: {r: 1, g: 0, b: 0, a: 0}
   alert: {fileID: 8300000, guid: c1aaabad273f0f44484c6936d7a3269d, type: 3}
-  audmixer: {fileID: 0}
-  tempvol: 0
-  finalvol: 0
   fader: {fileID: 0}
   fade: {fileID: 0}
   fadecolor: {r: 0, g: 0, b: 0, a: 0}
   fadeimage: {fileID: 8410612137342749146, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2,
     type: 3}
---- !u!114 &8371043205715261379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606314640886676181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a86dab77eed20b4aae9b961d6bea530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fader: {fileID: 8410612137342749150, guid: 4fb7ecf68a0a1d64bb1c1ea0318ba3b2, type: 3}
-  fade: {fileID: 0}
+  gameman: {fileID: 0}
 --- !u!114 &7216937896343073513
 MonoBehaviour:
   m_ObjectHideFlags: 0
