@@ -27,10 +27,10 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0
+    value: 0.08
   smoothness:
     overrideState: 1
-    value: 0.2
+    value: 0.32
   roundness:
     overrideState: 1
     value: 1
@@ -114,7 +114,7 @@ MonoBehaviour:
     value: 10
   aperture:
     overrideState: 1
-    value: 7.7
+    value: 9.5
   focalLength:
     overrideState: 1
     value: 50
@@ -162,13 +162,13 @@ MonoBehaviour:
     value: 1
   softKnee:
     overrideState: 1
-    value: 0.45
+    value: 0.53
   clamp:
     overrideState: 1
     value: 65472
   diffusion:
     overrideState: 1
-    value: 7.1
+    value: 8.5
   anamorphicRatio:
     overrideState: 1
     value: -0.21
