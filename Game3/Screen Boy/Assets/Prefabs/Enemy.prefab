@@ -45,14 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
-  Health: {fileID: 0}
+  gameman: {fileID: 0}
   particles: {fileID: 713421111203159363, guid: 613f15b90315a924bb0a7bf3e732bda1,
     type: 3}
   inv: 0
   enemydeath: {fileID: 8300000, guid: 0c6b8bf6201cd4742b4ecfafde66450b, type: 3}
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   vol: 0
-  tempvol: 0
   plrobj: {fileID: 0}
   plr: {fileID: 0}
   bounceheight: 0
@@ -165,14 +163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 6963514835698966207}
-  Health: {fileID: 0}
+  gameman: {fileID: 0}
   particles: {fileID: 713421111203159363, guid: 613f15b90315a924bb0a7bf3e732bda1,
     type: 3}
   inv: 0
   enemydeath: {fileID: 8300000, guid: 0c6b8bf6201cd4742b4ecfafde66450b, type: 3}
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   vol: 0
-  tempvol: 0
   plrobj: {fileID: 0}
   plr: {fileID: 0}
   bounceheight: 60
@@ -285,14 +281,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 6963514835698966207}
-  Health: {fileID: 0}
+  gameman: {fileID: 0}
   particles: {fileID: 713421111203159363, guid: 613f15b90315a924bb0a7bf3e732bda1,
     type: 3}
   inv: 0
   enemydeath: {fileID: 8300000, guid: 0c6b8bf6201cd4742b4ecfafde66450b, type: 3}
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   vol: 0
-  tempvol: 0
   plrobj: {fileID: 0}
   plr: {fileID: 0}
   bounceheight: 60
@@ -556,6 +550,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 0061b6ceceaeb7340bd8993e2d310a3a, type: 2}
+    - target: {fileID: -6686056005834992781, guid: 90ca27376fd20d040888001a9930d090,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a67d0947c4e2942b639fd4341aa40c, type: 2}
     - target: {fileID: -4216859302048453862, guid: 90ca27376fd20d040888001a9930d090,
         type: 3}
       propertyPath: m_LocalPosition.x
