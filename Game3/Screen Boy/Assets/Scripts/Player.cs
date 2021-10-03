@@ -64,7 +64,7 @@ void Update()
     V3.y = V3.y + (Physics.gravity.y * gravityspeed * Time.deltaTime);
     contrl.Move(V3 * Time.deltaTime);
     //move horizontal
-    if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+    if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
     {
 
         transform.rotation = Quaternion.Euler(0f, pivot.rotation.eulerAngles.y, 0f);

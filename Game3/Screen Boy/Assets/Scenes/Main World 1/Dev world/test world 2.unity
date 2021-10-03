@@ -745,9 +745,8 @@ MonoBehaviour:
   checkaudio: {fileID: 1064898555}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
-  tempvol: 0
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   model: {fileID: 737908295}
+  gameman: {fileID: 0}
 --- !u!65 &737908298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -900,9 +899,8 @@ MonoBehaviour:
   checkaudio: {fileID: 1013355226}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
-  tempvol: 0
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   model: {fileID: 1012238464}
+  gameman: {fileID: 0}
 --- !u!65 &1012238467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1328,9 +1326,8 @@ MonoBehaviour:
   checkaudio: {fileID: 537681186}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
-  tempvol: 0
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   model: {fileID: 1160800692}
+  gameman: {fileID: 0}
 --- !u!65 &1160800695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2171,9 +2168,8 @@ MonoBehaviour:
   checkaudio: {fileID: 672810928}
   checksound: {fileID: 8300000, guid: 4c0402031d8d57040b714447e620f533, type: 3}
   checkvolume: 1
-  tempvol: 0
-  audmix: {fileID: 24100000, guid: b579f3b4c8dbf93499a1eda97da3101e, type: 2}
   model: {fileID: 2101376805}
+  gameman: {fileID: 0}
 --- !u!65 &2101376807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2721,5 +2717,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1051148573}
+    - target: {fileID: 6292375734882323741, guid: a85095760201da447b1874cd4a314fe3,
+        type: 3}
+      propertyPath: minangle
+      value: -50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a85095760201da447b1874cd4a314fe3, type: 3}

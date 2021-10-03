@@ -46,15 +46,19 @@ public class Camera : MonoBehaviour
         //horizontal and vertical floats 
         float horizontal = Input.GetAxis("Mouse X") * camspeed;
         pivot.Rotate(0, horizontal, 0);
+//        pivot.Rotate(0, horizontal, 0);
+
 
         float vertical = Input.GetAxis("Mouse Y") * camspeed;
-        pivot.Rotate(-vertical, 0, 0);
+        pivot.Rotate(vertical, 0, 0);
+ //        pivot.Rotate(-vertical, 0, 0);
+
         //min and max angles
         if (pivot.rotation.eulerAngles.x > maxangle && pivot.rotation.eulerAngles.x < 180f)
         {
             pivot.rotation = Quaternion.Euler(maxangle, pivot.rotation.eulerAngles.y, 0f);
         }
-        if (pivot.rotation.eulerAngles.x > 180 && pivot.rotation.eulerAngles.x < 360f + minangle)
+        if (pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minangle)
         {
             pivot.rotation = Quaternion.Euler(360f + minangle, pivot.rotation.eulerAngles.y, 0f);
         }
